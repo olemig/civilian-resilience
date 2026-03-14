@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Civilian Resilience — Competence Is Your Only Insurance</title>
+<title>Civil Resiliency Lab — Competence Is Your Only Insurance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
-
 <style>
+
 /* ═══════════════════════════════════════════════
    DESIGN SYSTEM — HIGH CONTRAST SAFETY PALETTE
    ═══════════════════════════════════════════════ */
@@ -27,10 +27,10 @@
   --ink-muted: #7A7468;   /* muted / captions */
 
   /* Accent — warm amber/olive for safety brand */
-  --accent:        #8B6914;   /* dark amber — high contrast on light bg */
-  --accent-light:  #C8940E;   /* medium amber */
-  --accent-bg:     rgba(139,105,20,0.08);
-  --accent-border: rgba(139,105,20,0.3);
+  --accent:        #FF5F1F;   /* safety orange — brand accent */
+  --accent-light:  #FF8050;   /* medium amber */
+  --accent-bg:     rgba(255,95,31,0.08);
+  --accent-border: rgba(255,95,31,0.3);
 
   /* Semantic */
   --danger:  #B02A1A;
@@ -91,7 +91,7 @@ body::before {
   flex-shrink: 0;
   cursor: pointer;
 }
-.nav-logo .dot { color: var(--accent); }
+.nav-logo .dot { color: var(--accent); font-size: 1.6rem; line-height: 1; margin-left: 1px; }
 
 .nav-tabs {
   display: flex;
@@ -219,7 +219,7 @@ body::before {
   font-size: 0.72rem;
   padding: 12px 28px;
 }
-.btn-accent:hover { background: var(--accent-light); box-shadow: 0 4px 16px rgba(139,105,20,0.25); transform: translateY(-1px); }
+.btn-accent:hover { background: var(--accent-light); box-shadow: 0 4px 16px rgba(255,95,31,0.25); transform: translateY(-1px); }
 
 .btn-ghost {
   background: transparent;
@@ -440,7 +440,7 @@ body::before {
   transition: color 0.25s;
   pointer-events: none;
 }
-.why-card:hover .wc-num { color: rgba(139,105,20,0.12); }
+.why-card:hover .wc-num { color: rgba(255,95,31,0.12); }
 .wc-icon { font-size: 1.8rem; margin-bottom: 16px; }
 .wc-title {
   font-family: 'Playfair Display', serif;
@@ -457,69 +457,7 @@ body::before {
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
 }
-.tiers-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 52px;
-}
-.tier-card {
-  background: var(--surface);
-  border: 1.5px solid var(--border);
-  border-radius: 3px;
-  padding: 40px 36px;
-  position: relative;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.tier-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(18,18,18,0.1); }
-.tier-card.featured { border-color: var(--ink); }
-.tier-card.featured::before {
-  content:'';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--accent);
-}
-.tier-badge {
-  display: inline-block;
-  font-size: 0.58rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 1px;
-  margin-bottom: 24px;
-  border: 1px solid;
-}
-.tier-card:not(.featured) .tier-badge { border-color: var(--border); color: var(--ink-muted); }
-.tier-card.featured .tier-badge { border-color: var(--accent-border); color: var(--accent); background: var(--accent-bg); }
-.tier-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.08em;
-  margin-bottom: 6px;
-}
-.tier-price {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3.2rem;
-  color: var(--accent);
-  line-height: 1;
-  letter-spacing: 0.03em;
-  margin-bottom: 4px;
-}
-.tier-price-note { font-size: 0.72rem; color: var(--ink-muted); margin-bottom: 28px; }
-.tier-features { list-style: none; margin-bottom: 36px; }
-.tier-features li {
-  font-size: 0.82rem;
-  color: var(--ink-mid);
-  padding: 9px 0;
-  border-bottom: 1px solid var(--border-lt);
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-.tier-features li::before { content:'–'; color: var(--border); flex-shrink:0; }
-.tier-features li.yes::before { content:'✓'; color: var(--success); }
-.tier-features li.yes { color: var(--ink); }
+
 
 /* TESTIMONIALS */
 .home-testi {
@@ -647,35 +585,6 @@ body::before {
   margin-bottom: 44px;
 }
 
-.tier-selector {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 40px;
-}
-.tier-opt {
-  border: 1.5px solid var(--border);
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 22px 20px;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s, transform 0.15s;
-  position: relative;
-}
-.tier-opt:hover { border-color: var(--ink-muted); background: var(--bg); transform: translateY(-2px); }
-.tier-opt.selected { border-color: var(--ink); background: var(--bg); }
-.tier-opt.selected::after {
-  content: '✓';
-  position: absolute;
-  top: 10px; right: 14px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-.to-label { font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 6px; }
-.to-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 4px; }
-.to-desc { font-size: 0.73rem; color: var(--ink-muted); line-height: 1.45; }
-
 .email-row { display: flex; gap: 12px; max-width: 480px; }
 .privacy { font-size: 0.62rem; color: var(--ink-muted); margin-top: 10px; }
 
@@ -759,20 +668,7 @@ body::before {
 
 .q-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 
-/* GENERATING */
-.gen-screen { text-align: center; padding: 80px 0; }
-.gen-spinner {
-  width: 52px; height: 52px;
-  border: 2px solid var(--border);
-  border-top-color: var(--accent);
-  border-radius: 50%;
-  animation: spin 0.9s linear infinite;
-  margin: 0 auto 28px;
-}
-.gen-h { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.1em; margin-bottom: 6px; }
-.gen-sub { font-size: 0.78rem; color: var(--ink-muted); letter-spacing: 0.1em; }
-
-/* RESULTS TIER 1 */
+/* RESULTS */
 .results-hero { padding: 40px 0 56px; text-align: center; }
 .score-ring-wrap { width: 180px; height: 180px; margin: 0 auto 24px; position: relative; }
 .score-ring-wrap svg { transform: rotate(-90deg); }
@@ -822,71 +718,6 @@ body::before {
 .ref-ans { font-size: 0.72rem; color: var(--danger); margin-bottom: 5px; display: flex; align-items: center; gap: 5px; }
 .ref-ans::before { content:'↓'; }
 .ref-ch { font-size: 0.7rem; color: var(--accent); font-weight: 600; }
-
-/* TIER 2 TEASER */
-.t2-teaser {
-  background: var(--bg-alt);
-  border: 1.5px solid var(--ink);
-  border-radius: 3px;
-  padding: 40px 36px;
-  text-align: center;
-  margin-bottom: 48px;
-  position: relative;
-}
-.t2-teaser::before { content:''; position:absolute; top:0;left:0;right:0; height:3px; background:var(--accent); }
-.t2-teaser h3 { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.08em; margin-bottom:10px; }
-.t2-teaser p { font-size:0.83rem; color:var(--ink-mid); max-width:440px; margin:0 auto 26px; line-height:1.6; }
-.t2-feats { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
-.t2-feat { font-size:0.68rem; color:var(--ink-mid); display:flex; align-items:center; gap:6px; }
-.t2-feat::before { content:'✓'; color:var(--success); font-weight:700; }
-
-/* AI REPORT */
-.ai-report {
-  background: var(--surface);
-  border: 1.5px solid var(--ink);
-  border-radius: 3px;
-  overflow: hidden;
-  margin-bottom: 48px;
-}
-.ai-header {
-  background: var(--ink);
-  padding: 18px 28px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.ai-dot { width:8px;height:8px;border-radius:50%;background:var(--accent-light);animation:pulse 2s infinite; }
-.ai-lbl { font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--bg); }
-.ai-model { margin-left:auto;font-size:0.62rem;color:rgba(255,255,255,0.4); }
-.ai-body { padding: 28px; }
-.ai-sec { margin-bottom: 28px; }
-.ai-sec-title {
-  font-size: 0.62rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.ai-txt { font-size: 0.86rem; line-height: 1.7; color: var(--ink-mid); }
-.ai-txt strong { color: var(--ink); }
-.ai-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
-.ai-li {
-  font-size: 0.82rem;
-  color: var(--ink-mid);
-  padding: 10px 14px;
-  background: var(--bg);
-  border-radius: var(--radius);
-  border-left: 2px solid var(--accent);
-  line-height: 1.5;
-}
-.tl-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
-.tl-col { background:var(--bg); border-radius:var(--radius); padding:14px; }
-.tl-lbl { font-size:0.56rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);font-weight:600;display:block;margin-bottom:8px; }
-.tl-item { font-size:0.73rem;color:var(--ink-mid);padding:5px 0;border-bottom:1px solid var(--border-lt);line-height:1.4; }
-.tl-item:last-child { border-bottom:none; }
 
 .results-cta { display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding-top:8px; }
 
@@ -1161,7 +992,7 @@ body::before {
   gap: 24px;
 }
 .footer-logo { font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;color:var(--bg); }
-.footer-logo .dot { color:var(--accent-light); }
+.footer-logo .dot { color:var(--accent-light); font-size:1.5rem; line-height:1; }
 .footer-tag { font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(242,240,235,0.4);margin-top:4px; }
 .footer-nav { display:flex;gap:24px;flex-wrap:wrap; }
 .f-link {
@@ -1180,65 +1011,65 @@ body::before {
   .hero-stat { width:50%;text-align:left;border-right:1px solid var(--border-lt); }
   .hero-stat:nth-child(2n) { border-right:none;padding-left:20px; }
   .why-grid,
-  .tiers-grid,
   .testi-grid { grid-template-columns:1fr; }
   .home-why, .home-tiers, .home-testi, .home-cta { padding:60px 24px; }
   .featured-grid { grid-template-columns:1fr; }
   .articles-grid { grid-template-columns:1fr 1fr; }
   .chapter-grid { grid-template-columns:1fr 1fr; }
-  .nav-tabs { display:none; }
-  .nav-cta { display:none; }
-  .nav-burger { display:flex; }
   #site-footer { padding:36px 24px; flex-direction:column;align-items:flex-start; }
 }
 @media(max-width:600px) {
+  /* Tabs always visible — compress them on small screens */
+  .nav-logo { padding:0 14px; font-size:0.58rem; }
+  .nav-tab  { padding:0 12px; font-size:0.6rem; letter-spacing:0.12em; }
+  .nav-cta  { display:none; }
+  .nav-burger { display:none; }
   .calc-intro h1 { font-size:3.5rem; }
-  .tier-selector { grid-template-columns:1fr; }
   .email-row { flex-direction:column; }
   .q-nav { flex-direction:column-reverse; }
   .q-nav .btn-ghost, .q-nav .btn-primary { width:100%;justify-content:center;text-align:center; }
-  .tl-grid { grid-template-columns:1fr; }
   .dash-stats { grid-template-columns:1fr 1fr; }
   .articles-grid, .chapter-grid { grid-template-columns:1fr; }
   .nl-banner { flex-direction:column; }
   .nl-form { flex-direction:column; }
 }
+
 </style>
 </head>
 <body>
 
 <!-- ═══ NAV ═══ -->
 <nav id="site-nav">
-  <div class="nav-logo" onclick="showPage('home')">
-    CIVILIAN<span class="dot">.</span>RESILIENCE
+  <div class="nav-logo" id="nav-logo">
+    CIVIL RESILIENCY LAB<span class="dot">●</span>
   </div>
   <div class="nav-tabs">
-    <div class="nav-tab active" data-page="home"    onclick="showPage('home')">Home</div>
-    <div class="nav-tab"        data-page="calc"    onclick="showPage('calc')">Calculator</div>
-    <div class="nav-tab"        data-page="cabinet" onclick="showPage('cabinet')">Cabinet</div>
-    <div class="nav-tab"        data-page="intel"   onclick="showPage('intel')">Intel Hub</div>
+    <div class="nav-tab active" data-page="home">Home</div>
+    <div class="nav-tab"        data-page="calc">Calculator</div>
+    <div class="nav-tab"        data-page="cabinet">Cabinet</div>
+    <div class="nav-tab"        data-page="intel">Intel Hub</div>
   </div>
   <div class="nav-cta">
-    <button class="btn btn-primary sm" onclick="showPage('calc')">Take Assessment</button>
+    <button class="btn btn-primary sm" id="btn-nav-cta">Take Assessment</button>
   </div>
-  <button class="nav-burger" onclick="toggleMobileNav()">☰</button>
+  <button class="nav-burger" id="btn-burger">☰</button>
 </nav>
 <div class="nav-mobile-drawer" id="mobileNav">
-  <div class="nav-mobile-item active" data-page="home"    onclick="showPage('home');toggleMobileNav()">Home</div>
-  <div class="nav-mobile-item"        data-page="calc"    onclick="showPage('calc');toggleMobileNav()">Calculator</div>
-  <div class="nav-mobile-item"        data-page="cabinet" onclick="showPage('cabinet');toggleMobileNav()">Cabinet</div>
-  <div class="nav-mobile-item"        data-page="intel"   onclick="showPage('intel');toggleMobileNav()">Intel Hub</div>
+  <div class="nav-mobile-item active" data-page="home">Home</div>
+  <div class="nav-mobile-item"        data-page="calc">Calculator</div>
+  <div class="nav-mobile-item"        data-page="cabinet">Cabinet</div>
+  <div class="nav-mobile-item"        data-page="intel">Intel Hub</div>
 </div>
+
 
 <!-- ═══════════════════════════════════════════════
      PAGE: HOME
 ═══════════════════════════════════════════════ -->
 <div id="page-home" class="page active">
 
-  <!-- HERO -->
   <div class="home-hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">Civilian Resilience Framework</div>
+      <div class="hero-eyebrow">Civil Resiliency Lab Framework</div>
       <h1 class="hero-h1">
         COMPETENCE
         <span class="line-accent">IS YOUR</span>
@@ -1246,11 +1077,11 @@ body::before {
       </h1>
       <p class="hero-sub">A practical, evidence-based resilience system for civilians. Assess your preparedness across 5 critical domains, find your blind spots, and build real capability — before you need it.</p>
       <div class="hero-ctas">
-        <button class="btn btn-primary lg" onclick="showPage('calc')">
+        <button class="btn btn-primary lg" id="btn-hero-assessment">
           Take Free Assessment
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <button class="btn btn-outline" onclick="showPage('intel')">Browse Intel Hub</button>
+        <button class="btn btn-outline" id="btn-hero-intel">Browse Intel Hub</button>
       </div>
     </div>
     <div class="hero-right">
@@ -1269,7 +1100,6 @@ body::before {
     </div>
   </div>
 
-  <!-- MARQUEE -->
   <div class="marquee-strip">
     <div class="marquee-inner">
       <span class="marquee-item"><span class="dot">◆</span>WATER & FOOD SECURITY</span>
@@ -1291,7 +1121,6 @@ body::before {
     </div>
   </div>
 
-  <!-- WHY -->
   <div class="home-why">
     <div class="section-eyebrow">Why This Matters</div>
     <div style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;max-width:620px;margin-bottom:0">
@@ -1299,77 +1128,63 @@ body::before {
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <div class="wc-num">01</div>
-        <div class="wc-icon">⚡</div>
+        <div class="wc-num">01</div><div class="wc-icon">⚡</div>
         <div class="wc-title">Crises Don't Announce Themselves</div>
         <p class="wc-body">Power grids fail. Supply chains break. Systems that felt permanent vanish overnight. The gap between awareness and action is where most people get caught.</p>
       </div>
       <div class="why-card">
-        <div class="wc-num">02</div>
-        <div class="wc-icon">🧠</div>
+        <div class="wc-num">02</div><div class="wc-icon">🧠</div>
         <div class="wc-title">Preparedness Is a Skill, Not a Product</div>
         <p class="wc-body">You can't buy resilience. You can only build it — through knowledge, practice, and systems developed before the pressure arrives.</p>
       </div>
       <div class="why-card">
-        <div class="wc-num">03</div>
-        <div class="wc-icon">🗺</div>
+        <div class="wc-num">03</div><div class="wc-icon">🗺</div>
         <div class="wc-title">Most Guides Are Incomplete</div>
         <p class="wc-body">Checklists without context are useless. Our framework connects every recommendation to the reasoning behind it and the specific scenario it addresses.</p>
       </div>
       <div class="why-card">
-        <div class="wc-num">04</div>
-        <div class="wc-icon">🤝</div>
+        <div class="wc-num">04</div><div class="wc-icon">🤝</div>
         <div class="wc-title">Community Is the Ultimate Multiplier</div>
         <p class="wc-body">No individual survives a sustained crisis alone. Building and sustaining a local resilience network is the highest-leverage preparation you can make.</p>
       </div>
     </div>
   </div>
 
-  <!-- TIERS -->
   <div class="home-tiers">
-    <div class="section-eyebrow">Assessment Tiers</div>
+    <div class="section-eyebrow">What You Get</div>
     <div style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin-bottom:0">
-      Choose your level of <em style="color:var(--accent)">insight</em>
+      Free. 3 minutes.<br><em style="color:var(--accent)">Real results.</em>
     </div>
-    <div class="tiers-grid">
-      <div class="tier-card">
-        <span class="tier-badge">Tier 1 — Free</span>
-        <div class="tier-name">Baseline Score</div>
-        <div class="tier-price">FREE</div>
-        <div class="tier-price-note">14 questions · ~3 minutes</div>
-        <ul class="tier-features">
-          <li class="yes">Overall Resilience Score (0–28)</li>
-          <li class="yes">Domain breakdown across 5 categories</li>
-          <li class="yes">Book chapter references for every weak answer</li>
-          <li class="yes">Priority action list for your lowest scores</li>
-          <li>Full 64-question deep assessment</li>
-          <li>AI-generated personalised risk report</li>
-          <li>90-day action plan</li>
-        </ul>
-        <button class="btn btn-outline" style="width:100%;justify-content:center" onclick="showPage('calc')">Start Free Assessment</button>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="wc-num">01</div>
+        <div class="wc-title">Overall Resilience Score</div>
+        <p class="wc-body">Your score across 18 questions and 5 critical domains — an honest baseline of where you stand right now.</p>
       </div>
-      <div class="tier-card featured">
-        <span class="tier-badge">Tier 2 — Full Report</span>
-        <div class="tier-name">Deep Analysis</div>
-        <div class="tier-price">FREE*</div>
-        <div class="tier-price-note">*Email required · Paid upgrade coming soon</div>
-        <ul class="tier-features">
-          <li class="yes">Everything in Tier 1</li>
-          <li class="yes">All 64 questions across 5 advanced domains</li>
-          <li class="yes">AI-generated personalised risk report</li>
-          <li class="yes">Detailed scenario analysis per domain</li>
-          <li class="yes">30/60/90-day action plan</li>
-          <li class="yes">Cabinet dashboard to track progress</li>
-        </ul>
-        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="startTier2()">
-          Get Full Report
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
+      <div class="why-card">
+        <div class="wc-num">02</div>
+        <div class="wc-title">Domain Breakdown</div>
+        <p class="wc-body">See exactly which of your 5 domains — Housing, Water, Energy, Evacuation, Community — are strong and which need work.</p>
       </div>
+      <div class="why-card">
+        <div class="wc-num">03</div>
+        <div class="wc-title">Book Chapter References</div>
+        <p class="wc-body">Every weak answer links directly to the relevant chapter in the Civil Resiliency Lab. No vague advice — specific pages.</p>
+      </div>
+      <div class="why-card">
+        <div class="wc-num">04</div>
+        <div class="wc-title">Action Checklist</div>
+        <p class="wc-body">18 concrete, prioritised tasks saved in your Cabinet. Check them off as you build real capability over time.</p>
+      </div>
+    </div>
+    <div style="text-align:center;padding-top:8px">
+      <button class="btn btn-primary lg" id="btn-tier1-start">
+        Take Free Assessment
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
     </div>
   </div>
 
-  <!-- TESTIMONIALS -->
   <div class="home-testi">
     <div class="section-eyebrow">From The Community</div>
     <div style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin-bottom:0">
@@ -1378,35 +1193,35 @@ body::before {
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"I thought I was reasonably prepared until the assessment revealed I had zero plan for water filtration and no communication protocol. Game-changing perspective shift."</p>
+        <div class="testi-quote">"I thought I was reasonably prepared until the assessment revealed I had zero plan for water filtration and no communication protocol. Game-changing perspective shift."</div>
         <div class="testi-name">MARTA K.</div>
         <div class="testi-loc">Warsaw, Poland</div>
       </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"The book references after each weak answer are gold. I went from scoring 11/28 to 24/28 in six weeks by following the recommended chapters."</p>
+        <div class="testi-quote">"The book references after each weak answer are gold. I went from scoring 11/28 to 24/28 in six weeks by following the recommended chapters."</div>
         <div class="testi-name">DMYTRO V.</div>
         <div class="testi-loc">Kyiv, Ukraine</div>
       </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"The Tier 2 AI report identified my biggest vulnerability: 9th floor apartment. I've since built a ground-level network with four neighbours."</p>
+        <div class="testi-quote">"The assessment identified my biggest vulnerability: 9th floor apartment. I've since built a ground-level network with four neighbours."</div>
         <div class="testi-name">ANNA S.</div>
         <div class="testi-loc">Kraków, Poland</div>
       </div>
     </div>
   </div>
 
-  <!-- CTA BANNER -->
   <div class="home-cta">
-    <div class="section-eyebrow" style="justify-content:center;margin-bottom:20px">Your Assessment Awaits</div>
-    <h2>HOW RESILIENT<br>ARE YOU — REALLY?</h2>
+    <div class="section-eyebrow" style="justify-content:center">Your Assessment Awaits</div>
+    <h2>HOW RESILIENT ARE YOU — REALLY?</h2>
     <p>Take the free 14-question baseline assessment and find out where you stand today.</p>
-    <button class="btn btn-primary lg" onclick="showPage('calc')">
+    <button class="btn btn-primary lg" id="btn-cta-assessment">
       Start Free Assessment
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </button>
   </div>
+
 </div><!-- /page-home -->
 
 
@@ -1414,155 +1229,89 @@ body::before {
      PAGE: CALCULATOR
 ═══════════════════════════════════════════════ -->
 <div id="page-calc" class="page">
-  <div style="position:sticky;top:56px;z-index:400;margin:0 -24px;background:var(--border);height:3px;max-width:none;">
+  <div class="calc-progress-rail">
     <div class="calc-progress-fill" id="calcProgressFill"></div>
   </div>
-  <div style="max-width:760px;margin:0 auto;padding:0 24px 100px;">
-
-  <div class="calc-header">
-    <div class="calc-tier-label" id="calcTierLabel">Tier 1 — Baseline Assessment</div>
-    <div class="calc-meta">
-      <div class="calc-meta-txt" id="calcMetaTxt">14 questions · ~3 minutes</div>
-      <div class="step-dots" id="stepDots"></div>
+  <div style="max-width:760px;margin:0 auto;padding:60px 24px 100px;">
+    <div class="calc-header">
+      <div class="calc-meta">
+        <div class="calc-meta-txt"><b>18</b> questions · 5 domains · ~4 min</div>
+        <div class="step-dots" id="stepDots"></div>
+      </div>
     </div>
-  </div>
 
-  <!-- EMAIL / TIER SCREEN -->
-  <div class="screen active" id="sc-email">
-    <div class="calc-intro">
-      <div class="label-tag" style="margin-bottom:24px">Free Assessment</div>
-      <h1>HOW RESILIENT<br><em>ARE YOU?</em></h1>
-      <p>Get your personalised Resilience Score in minutes. Identify blind spots and receive book chapter references — or unlock a full AI risk report.</p>
-      <div class="tier-selector">
-        <div class="tier-opt selected" id="topt1" onclick="selTier(1)">
-          <div class="to-label">Tier 1 · Free</div>
-          <div class="to-name">Baseline Score</div>
-          <div class="to-desc">14 questions · Score + book references per weak answer</div>
-        </div>
-        <div class="tier-opt" id="topt2" onclick="selTier(2)">
-          <div class="to-label">Tier 2 · Full Report</div>
-          <div class="to-name">Deep Analysis</div>
-          <div class="to-desc">64 questions · AI-generated personalised risk report</div>
-        </div>
+    <!-- START SCREEN -->
+    <div class="screen active" id="sc-email">
+      <div class="calc-intro">
+        <h1>HOW RESILIENT <em>ARE YOU?</em></h1>
+        <p>18 questions across 5 domains. Get your Resilience Score, find your blind spots, and receive specific book chapter references for every weak answer.</p>
       </div>
       <div class="email-row">
         <input type="email" class="input-field" id="emailInput" placeholder="your@email.com" />
-        <button class="btn btn-primary" onclick="startAssessment()">
+        <button class="btn btn-primary" id="btn-start-assessment">
           Begin
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
       <p class="privacy">🔒 No spam. Unsubscribe anytime.</p>
     </div>
-  </div>
 
-  <!-- QUESTION SCREEN -->
-  <div class="screen" id="sc-q">
-    <div class="q-cat-band" id="qCatBand">—</div>
-    <div class="q-counter">Question <b id="qNum">1</b> of <b id="qTotal">14</b></div>
-    <div class="q-text" id="qText"></div>
-    <div class="opts" id="optsList"></div>
-    <div class="q-nav">
-      <button class="btn btn-ghost" id="btnBack" onclick="goBack()">← Back</button>
-      <button class="btn btn-primary" id="btnNext" onclick="goNext()" disabled style="opacity:0.4;cursor:not-allowed">
-        Next <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
+    <!-- QUESTION -->
+    <div class="screen" id="sc-q">
+      <div class="q-cat-band" id="qCatBand">—</div>
+      <div class="q-counter">Question <b id="qNum">1</b> of <b id="qTotal">14</b></div>
+      <div class="q-text" id="qText"></div>
+      <div class="opts" id="optsList"></div>
+      <div class="q-nav">
+        <button class="btn btn-ghost" id="btnBack">← Back</button>
+        <button class="btn btn-primary" id="btnNext" disabled style="opacity:0.4;cursor:not-allowed">
+          Next <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <!-- GENERATING SCREEN -->
-  <div class="screen" id="sc-gen">
-    <div class="gen-screen">
-      <div class="gen-spinner"></div>
-      <div class="gen-h">GENERATING YOUR REPORT</div>
-      <div class="gen-sub">Analysing 64 data points across 5 domains…</div>
-    </div>
-  </div>
-
-  <!-- RESULTS TIER 1 -->
-  <div class="screen" id="sc-r1">
-    <div class="results-hero">
-      <div class="label-tag" style="margin-bottom:24px">Your Baseline Score</div>
-      <div class="score-ring-wrap">
-        <svg width="180" height="180" viewBox="0 0 180 180">
-          <circle class="ring-bg" cx="90" cy="90" r="80"/>
-          <circle class="ring-fill" id="ring1" cx="90" cy="90" r="80"/>
-        </svg>
-        <div class="score-center">
-          <div class="sc-num" id="sc1num">0</div>
-          <div class="sc-denom" id="sc1den">/ 28</div>
+    <!-- RESULTS -->
+    <div class="screen" id="sc-r1">
+      <div class="results-hero">
+        <div class="label-tag" style="margin-bottom:24px">Your Resilience Score</div>
+        <div class="score-ring-wrap">
+          <svg width="180" height="180" viewBox="0 0 180 180">
+            <circle class="ring-bg" cx="90" cy="90" r="80"/>
+            <circle class="ring-fill" id="ring1" cx="90" cy="90" r="80"/>
+          </svg>
+          <div class="score-center">
+            <div class="sc-num" id="sc1num">0</div>
+            <div class="sc-denom" id="sc1den">/ 36</div>
+          </div>
         </div>
+        <div class="score-tier" id="st1name">—</div>
+        <p class="score-desc" id="st1desc"></p>
       </div>
-      <div class="score-tier" id="st1name">—</div>
-      <p class="score-desc" id="st1desc"></p>
-    </div>
-    <div class="breakdown-section">
-      <div class="sec-head"><span>Score by Domain</span><span id="sc1pct" style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.05em;color:var(--accent)"></span></div>
-      <div id="dl1"></div>
-    </div>
-    <div id="refsWrap">
-      <div class="sec-head" style="margin-bottom:18px"><span>Study References — Weak Areas</span><span style="font-size:0.62rem;color:var(--ink-muted)">Book chapters to address your gaps</span></div>
-      <div id="refsList"></div>
-    </div>
-    <div class="t2-teaser" style="margin-top:40px">
-      <h3>Want the Full Picture?</h3>
-      <p>Unlock the complete 64-question assessment and receive an AI-generated personalised risk report with a 30/60/90-day action plan.</p>
-      <div class="t2-feats">
-        <span class="t2-feat">64 questions</span>
-        <span class="t2-feat">AI risk analysis</span>
-        <span class="t2-feat">Scenario modelling</span>
-        <span class="t2-feat">90-day plan</span>
-      </div>
-      <button class="btn btn-primary" onclick="upgradeTier2()">
-        Get Full AI Report — Free
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-    <div class="results-cta">
-      <button class="btn btn-outline" onclick="restartCalc()">Retake Assessment</button>
-      <button class="btn btn-ghost" onclick="showPage('intel')">Browse Intel Hub →</button>
-    </div>
-  </div>
-
-  <!-- RESULTS TIER 2 -->
-  <div class="screen" id="sc-r2">
-    <div class="results-hero">
-      <div class="label-tag" style="margin-bottom:24px">Full Risk Report — AI Generated</div>
-      <div class="score-ring-wrap">
-        <svg width="180" height="180" viewBox="0 0 180 180">
-          <circle class="ring-bg" cx="90" cy="90" r="80"/>
-          <circle class="ring-fill" id="ring2" cx="90" cy="90" r="80"/>
-        </svg>
-        <div class="score-center">
-          <div class="sc-num" id="sc2num">0</div>
-          <div class="sc-denom" id="sc2den">/ 128</div>
+      <div class="breakdown-section">
+        <div class="sec-head">
+          <span>Score by Domain</span>
+          <span id="sc1pct" style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.05em;color:var(--accent)"></span>
         </div>
+        <div id="dl1"></div>
       </div>
-      <div class="score-tier" id="st2name">—</div>
-      <p class="score-desc" id="st2desc"></p>
-    </div>
-    <div class="breakdown-section">
-      <div class="sec-head"><span>Score by Domain</span></div>
-      <div id="dl2"></div>
-    </div>
-    <div class="ai-report">
-      <div class="ai-header">
-        <div class="ai-dot"></div>
-        <span class="ai-lbl">AI Risk Analysis</span>
-        <span class="ai-model">Civilian Resilience Intelligence</span>
+      <div id="refsWrap" hidden>
+        <div class="sec-head" style="margin-bottom:18px">
+          <span>Study References — Weak Areas</span>
+          <span style="font-size:0.62rem;color:var(--ink-muted)">Book chapters to address your gaps</span>
+        </div>
+        <div id="refsList"></div>
       </div>
-      <div class="ai-body" id="aiBody"></div>
+      <div class="results-cta">
+        <button class="btn btn-primary" id="btn-view-cabinet">
+          Save to Cabinet
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-outline" id="btn-retake-r1">Retake Assessment</button>
+        <button class="btn btn-ghost"   id="btn-r1-intel">Browse Intel Hub →</button>
+      </div>
     </div>
-    <div class="results-cta">
-      <button class="btn btn-primary" onclick="showPage('cabinet')">
-        View in Cabinet
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-      <button class="btn btn-outline" onclick="restartCalc()">Retake Assessment</button>
-    </div>
-  </div>
 
-  </div><!-- /inner -->
+  </div>
 </div><!-- /page-calc -->
 
 
@@ -1570,27 +1319,27 @@ body::before {
      PAGE: CABINET
 ═══════════════════════════════════════════════ -->
 <div id="page-cabinet" class="page">
-  <div id="cab-inner" style="max-width:920px;margin:0 auto;padding:60px 24px 100px;">
+  <div style="max-width:920px;margin:0 auto;padding:60px 24px 100px;">
     <div class="cab-header">
       <div>
         <div class="label-tag" style="margin-bottom:12px">Personal Dashboard</div>
         <h1>YOUR CABINET</h1>
         <p>Track your resilience progress, review assessments, manage your action checklist.</p>
       </div>
-      <button class="btn btn-primary" onclick="showPage('calc')">Retake Assessment</button>
+      <button class="btn btn-primary" id="btn-cab-retake">Retake Assessment</button>
     </div>
     <div id="cab-empty">
       <div class="empty-state">
         <div class="empty-icon">📋</div>
         <h2>No Assessment Yet</h2>
         <p>Complete the Resilience Calculator to populate your Cabinet with your score, domain breakdown, and a personalised action checklist.</p>
-        <button class="btn btn-primary" onclick="showPage('calc')">
+        <button class="btn btn-primary" id="btn-cab-empty-start">
           Take Assessment
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
     </div>
-    <div id="cab-dash" style="display:none">
+    <div id="cab-dash" hidden>
       <div class="dash-stats">
         <div class="ds-cell"><div class="ds-val" id="ds-score">—</div><div class="ds-lbl">Overall Score</div></div>
         <div class="ds-cell"><div class="ds-val" id="ds-pct" style="color:var(--accent)">—</div><div class="ds-lbl">Readiness %</div></div>
@@ -1620,9 +1369,16 @@ body::before {
         <div class="cl-title">ACTION CHECKLIST</div>
         <div id="checklistEl"></div>
       </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <button class="btn btn-primary" onclick="startTier2()">Take Full Assessment</button>
-        <button class="btn btn-outline" onclick="clearCabinet()">Clear My Data</button>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button class="btn btn-outline" id="btn-clear-data">Clear My Data</button>
+      </div>
+      <!-- Inline confirm replaces browser confirm() dialog -->
+      <div id="confirm-clear" hidden style="margin-top:12px;padding:16px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius)">
+        <p style="font-size:0.82rem;color:var(--ink-mid);margin-bottom:12px">This will permanently delete your assessment results and checklist progress. Are you sure?</p>
+        <div style="display:flex;gap:10px">
+          <button class="btn btn-primary sm" id="btn-confirm-clear">Yes, clear everything</button>
+          <button class="btn btn-outline sm" id="btn-cancel-clear">Cancel</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1637,24 +1393,24 @@ body::before {
     <div class="intel-header">
       <div class="label-tag" style="margin-bottom:14px">Knowledge Base</div>
       <h1>INTEL <span>HUB</span></h1>
-      <p>Evidence-based guides, field-tested protocols, and structured knowledge — organised by chapter from the Civilian Resilience framework.</p>
+      <p>Evidence-based guides, field-tested protocols, and structured knowledge — organised by chapter from the Civil Resiliency Lab.</p>
     </div>
     <div class="search-bar">
-      <input type="text" class="input-field" id="intelSearch" placeholder="Search guides, protocols, chapters…" oninput="renderArticles()">
+      <input type="text" class="input-field" id="intelSearch" placeholder="Search guides, protocols, chapters…">
     </div>
     <div class="filter-bar" id="filterBar">
-      <button class="f-btn active" onclick="setFilter('all',this)">All</button>
-      <button class="f-btn" onclick="setFilter('water',this)">Water & Food</button>
-      <button class="f-btn" onclick="setFilter('medical',this)">Medical</button>
-      <button class="f-btn" onclick="setFilter('energy',this)">Energy</button>
-      <button class="f-btn" onclick="setFilter('evacuation',this)">Evacuation</button>
-      <button class="f-btn" onclick="setFilter('security',this)">Security</button>
-      <button class="f-btn" onclick="setFilter('psychology',this)">Psychology</button>
-      <button class="f-btn" onclick="setFilter('comms',this)">Comms</button>
+      <button class="f-btn active" data-filter="all">All</button>
+      <button class="f-btn" data-filter="water">Water & Food</button>
+      <button class="f-btn" data-filter="medical">Medical</button>
+      <button class="f-btn" data-filter="energy">Energy</button>
+      <button class="f-btn" data-filter="evacuation">Evacuation</button>
+      <button class="f-btn" data-filter="security">Security</button>
+      <button class="f-btn" data-filter="psychology">Psychology</button>
+      <button class="f-btn" data-filter="comms">Comms</button>
     </div>
     <div class="intel-sec-head" style="margin-bottom:16px">Featured</div>
     <div class="featured-grid" style="margin-bottom:44px">
-      <div class="feat-card" onclick="openArticle(0)">
+      <div class="feat-card" data-article-id="0">
         <div class="feat-visual">💧</div>
         <div class="feat-body">
           <div class="feat-cat">Water & Food · Chapter 2.2</div>
@@ -1664,12 +1420,12 @@ body::before {
         </div>
       </div>
       <div class="feat-side">
-        <div class="feat-side-card" onclick="openArticle(1)">
+        <div class="feat-side-card" data-article-id="1">
           <div class="feat-cat">Medical · Chapter 7.1</div>
           <div class="feat-title" style="font-family:'Playfair Display',serif;font-size:0.95rem;line-height:1.3;margin-bottom:6px">How to Build a Tactical Civilian First Aid Kit</div>
           <div class="feat-meta" style="font-size:0.62rem;color:var(--ink-muted)">8 min read</div>
         </div>
-        <div class="feat-side-card" onclick="openArticle(2)">
+        <div class="feat-side-card" data-article-id="2">
           <div class="feat-cat">Security · Chapter 9.1</div>
           <div class="feat-title" style="font-family:'Playfair Display',serif;font-size:0.95rem;line-height:1.3;margin-bottom:6px">The Grey Man Principle: Staying Invisible in a Crisis</div>
           <div class="feat-meta" style="font-size:0.62rem;color:var(--ink-muted)">6 min read</div>
@@ -1687,7 +1443,7 @@ body::before {
       </div>
       <div class="nl-form">
         <input type="email" class="nl-input" id="nlEmail" placeholder="your@email.com"/>
-        <button class="btn btn-accent" onclick="subscribeNL()">Subscribe</button>
+        <button class="btn btn-accent" id="btn-subscribe">Subscribe</button>
       </div>
     </div>
   </div>
@@ -1695,11 +1451,11 @@ body::before {
 
 
 <!-- MODAL -->
-<div class="modal-bg" id="modalBg" onclick="closeModal(event)">
+<div class="modal-bg" id="modalBg">
   <div class="modal-box" id="modalBox">
     <div class="modal-head">
       <div class="modal-cat-lbl" id="modalCat"></div>
-      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+      <button class="modal-close" id="btn-modal-close">✕</button>
     </div>
     <div class="modal-body">
       <div class="modal-title" id="modalTitle"></div>
@@ -1712,439 +1468,84 @@ body::before {
 <!-- ═══ FOOTER ═══ -->
 <footer id="site-footer">
   <div>
-    <div class="footer-logo">CIVILIAN<span class="dot">.</span>RESILIENCE</div>
+    <div class="footer-logo">CIVIL RESILIENCY LAB<span class="dot">●</span></div>
     <div class="footer-tag">Competence is Your Only Insurance</div>
   </div>
   <div class="footer-nav">
-    <button class="f-link" onclick="showPage('home')">Home</button>
-    <button class="f-link" onclick="showPage('calc')">Calculator</button>
-    <button class="f-link" onclick="showPage('cabinet')">Cabinet</button>
-    <button class="f-link" onclick="showPage('intel')">Intel Hub</button>
+    <button class="f-link" data-page="home">Home</button>
+    <button class="f-link" data-page="calc">Calculator</button>
+    <button class="f-link" data-page="cabinet">Cabinet</button>
+    <button class="f-link" data-page="intel">Intel Hub</button>
   </div>
-  <div class="footer-legal">© 2025 Civilian Resilience</div>
+  <div class="footer-legal">© 2025 Civil Resiliency Lab</div>
 </footer>
 
-
 <script>
-/* ═══════════════════════════════════════════════
-   NAVIGATION
-═══════════════════════════════════════════════ */
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.page === id));
-  document.querySelectorAll('.nav-mobile-item').forEach(t => t.classList.toggle('active', t.dataset.page === id));
-  window.scrollTo({top:0, behavior:'smooth'});
-  if(id === 'cabinet') loadCabinet();
-  if(id === 'intel') { renderArticles(); renderChapters(); }
-}
+// ═══════════════════════════════════════
+// DOMAINS, QUESTIONS, CHECKLIST DATA
+// To add a question: copy any {...} block and add to the array
+// To edit a question: find it by searching for part of the text
+// ═══════════════════════════════════════
 
-function toggleMobileNav() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
-
-window.addEventListener('scroll', () => {
-  document.getElementById('site-nav').classList.toggle('shadowed', window.scrollY > 20);
-});
-
-function startTier2() {
-  selTier(2);
-  showPage('calc');
-  // reset to email screen
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById('sc-email').classList.add('active');
-}
-
-/* ═══════════════════════════════════════════════
-   QUESTIONS DATA
-═══════════════════════════════════════════════ */
-const DOMAINS = ['Housing & Basics','Water, Food & Medical','Energy & Equipment','Evacuation & Movement','Security & Community','Advanced Readiness','Threats & Psychology'];
-
-const QUESTIONS = [
-  // TIER 1 (14)
-  {tier:1,domain:0,q:'Where do you live?',opts:[{k:'A',l:'Private house — autonomous',s:2},{k:'B',l:'Apartment, floors 0–5',s:1},{k:'C',l:'Apartment, floor 6+ (lift/pump dependent)',s:0}],ref:'Chapter 3.1 — Housing types and their risks'},
-  {tier:1,domain:3,q:'How quickly could you evacuate your home if necessary?',opts:[{k:'A',l:'Under 15 minutes — everything is packed',s:2},{k:'B',l:'15–30 minutes',s:1},{k:'C',l:'More than 30 minutes',s:0}],ref:'Chapter 3.5 — Rapid evacuation algorithm'},
-  {tier:1,domain:3,q:'How far do you live from the nearest city centre?',opts:[{k:'A',l:'Far enough to avoid the epicentre of events',s:2},{k:'B',l:'5–20 km',s:1},{k:'C',l:'Less than 5 km — high risk/panic zone',s:0}],ref:'Chapter 5.1 — Urban logistics in crisis'},
-  {tier:1,domain:1,q:'How much food and water do you have stored at home?',opts:[{k:'A',l:'72+ hours of supply',s:2},{k:'B',l:'24–48 hours',s:1},{k:'C',l:'None / less than a day',s:0}],ref:'Chapter 2.2 — Water and food: minimum calculation'},
-  {tier:1,domain:1,q:'Do you have emergency cash at home?',opts:[{k:'A',l:'Yes — enough for 2+ weeks',s:2},{k:'B',l:'A small amount',s:1},{k:'C',l:'No — everything on cards',s:0}],ref:'Chapter 2.7 — Financial security'},
-  {tier:1,domain:1,q:'Do you have a first aid kit at home?',opts:[{k:'A',l:'Full kit + first aid training',s:2},{k:'B',l:'Basic kit',s:1},{k:'C',l:'None',s:0}],ref:'Chapter 7.1 — Tactical and civilian first aid kit'},
-  {tier:1,domain:2,q:'Is there an alternative heating source in your home?',opts:[{k:'A',l:'Generator, solar panels or wood stove',s:2},{k:'B',l:'Gas heater or portable solutions',s:1},{k:'C',l:'No — only central heating',s:0}],ref:'Chapter 4.4 — Energy independence and heat'},
-  {tier:1,domain:4,q:'Do you have a family communication plan for emergencies?',opts:[{k:'A',l:'Yes — clear, written, known by everyone',s:2},{k:'B',l:'Discussed verbally (informal)',s:1},{k:'C',l:'No plan',s:0}],ref:'Chapter 2.8 — Communication protocols'},
-  {tier:1,domain:4,q:'How well do you know your neighbours?',opts:[{k:'A',l:'High trust — ready for mutual cooperation',s:2},{k:'B',l:'Know them by face, greet occasionally',s:1},{k:'C',l:'Not at all',s:0}],ref:'Chapter 6.3 — Social capital of the building'},
-  {tier:1,domain:3,q:'Do you have a plan for where to go if your home is unusable for a week?',opts:[{k:'A',l:'Yes — two specific options with routes',s:2},{k:'B',l:'Roughly know (friends/parents)',s:1},{k:'C',l:'No idea',s:0}],ref:'Chapter 5.2 — Evacuation plan'},
-  {tier:1,domain:0,q:'How would you rate your physical fitness for emergency situations?',opts:[{k:'A',l:'High — able to walk 20+ km with a backpack',s:2},{k:'B',l:'Average',s:1},{k:'C',l:'Low — tire quickly',s:0}],ref:'Chapter 2.3 — Physical resources'},
-  {tier:1,domain:4,q:'Do you know local emergency services and procedures?',opts:[{k:'A',l:'Yes — including local resilience hubs and shelters',s:2},{k:'B',l:'Vaguely',s:1},{k:'C',l:'Have not looked into it',s:0}],ref:'Chapter 14.1 — Interaction with emergency services'},
-  {tier:1,domain:0,q:'How do you monitor news and emerging threats?',opts:[{k:'A',l:'Multiple verified sources + battery-powered radio',s:2},{k:'B',l:'Scrolling social media feeds',s:1},{k:'C',l:'Don\'t monitor at all',s:0}],ref:'Chapter 2.1 — Information hygiene'},
-  {tier:1,domain:3,q:'What is the status of your vehicle in terms of preparedness?',opts:[{k:'A',l:'Always above half a tank + assembled car kit',s:2},{k:'B',l:'Half tank, vehicle in good condition',s:1},{k:'C',l:'Empty tank or no vehicle',s:0}],ref:'Chapter 3.6 — Vehicle preparation'},
-  // TIER 2 (50)
-  {tier:2,domain:0,q:'Do you know the 6 signs of beginning systemic collapse (not just an accident)?',opts:[{k:'A',l:'Yes — I track critical markers',s:2},{k:'B',l:'Roughly understand',s:1},{k:'C',l:'No — I wait for official news',s:0}],ref:'Chapter 1.1 — Systemic collapse markers'},
-  {tier:2,domain:0,q:'What is your reaction to an unclear threat in the first minutes?',opts:[{k:'A',l:'Use the STOP protocol (Stop-Think-Observe-Plan)',s:2},{k:'B',l:'Start packing quickly',s:1},{k:'C',l:'Panic or freeze',s:0}],ref:'Chapter 2.1 — STOP protocol'},
-  {tier:2,domain:1,q:'Can you drain water from a boiler and heating pipes?',opts:[{k:'A',l:'Yes — know the technique and have the tools',s:2},{k:'B',l:'Theoretically know how',s:1},{k:'C',l:'No',s:0}],ref:'Chapter 2.2 — Water draining technique'},
-  {tier:2,domain:1,q:'How do you disinfect water from uncertain sources?',opts:[{k:'A',l:'Filters, tablets and know SODIS method',s:2},{k:'B',l:'Boiling only',s:1},{k:'C',l:'Don\'t know the methods',s:0}],ref:'Chapter 3.3 — Water disinfection methods'},
-  {tier:2,domain:1,q:'Is your food supply calculated at 1500–2000 kcal per day per person?',opts:[{k:'A',l:'Yes — precise calculation done',s:2},{k:'B',l:'I just have "lots of canned goods"',s:1},{k:'C',l:'Have not calculated',s:0}],ref:'Chapter 2.2 — Caloric food calculation'},
-  {tier:2,domain:1,q:'Can you apply a tourniquet to yourself with one hand?',opts:[{k:'A',l:'Yes — train regularly',s:2},{k:'B',l:'Watched a video, have a tourniquet',s:1},{k:'C',l:'No — don\'t have a tourniquet',s:0}],ref:'Chapter 7.1 — Self-tourniquet technique'},
-  {tier:2,domain:1,q:'Does your first aid kit contain rehydration solutions and sorbents?',opts:[{k:'A',l:'Yes — in large quantities',s:2},{k:'B',l:'Only activated charcoal',s:1},{k:'C',l:'None',s:0}],ref:'Chapter 7.2 — Rehydration and sorbents'},
-  {tier:2,domain:1,q:'Do you have a 3-month supply of prescription medication for chronic conditions?',opts:[{k:'A',l:'Yes — with rotation by expiry date',s:2},{k:'B',l:'Have 2–3 weeks\' supply',s:1},{k:'C',l:'No reserves',s:0}],ref:'Chapter 2.3 — Chronic medication reserves'},
-  {tier:2,domain:2,q:'What is your main lighting method during a blackout?',opts:[{k:'A',l:'Headlamps for each person + battery reserves',s:2},{k:'B',l:'Hand-held torches on batteries',s:1},{k:'C',l:'Candles / phone',s:0}],ref:'Chapter 2.4 — Lighting solutions'},
-  {tier:2,domain:2,q:'Do you have light masking (blackout) for your windows?',opts:[{k:'A',l:'Blackout curtains/film that blocks light outside',s:2},{k:'B',l:'Just turn off the lights',s:1},{k:'C',l:'No masking capability',s:0}],ref:'Chapter 3.3 — Light discipline'},
-  {tier:2,domain:2,q:'How will you charge devices for more than 3 days without power?',opts:[{k:'A',l:'Solar panel or car inverter',s:2},{k:'B',l:'Have a large power bank',s:1},{k:'C',l:'No way — dependent on the grid',s:0}],ref:'Chapter 2.4 — Off-grid charging'},
-  {tier:2,domain:2,q:'Do you know the rules for storing petrol (shelf life and containers)?',opts:[{k:'A',l:'Metal canisters + fuel stabiliser',s:2},{k:'B',l:'Plastic canisters in the garage',s:1},{k:'C',l:'Don\'t store fuel',s:0}],ref:'Chapter 8.3 — Fuel storage'},
-  {tier:2,domain:2,q:'What is your plan if heating disappears in winter?',opts:[{k:'A',l:'Set up a "tent" inside a room to retain heat',s:2},{k:'B',l:'Warm myself by the stove',s:1},{k:'C',l:'Just dress warmer',s:0}],ref:'Chapter 4.4 — Indoor heat retention'},
-  {tier:2,domain:0,q:'How do you handle the toilet without sewage?',opts:[{k:'A',l:'"Dry toilet" system (bucket + bags + sawdust)',s:2},{k:'B',l:'Will go outside',s:1},{k:'C',l:'Flush with remaining water',s:0}],ref:'Chapter 4.5 — Sanitation without sewage'},
-  {tier:2,domain:3,q:'Do you have paper maps of the city with marked water sources?',opts:[{k:'A',l:'Yes — with scouted routes to them',s:2},{k:'B',l:'Have a basic city map',s:1},{k:'C',l:'Only digital maps',s:0}],ref:'Chapter 2.6 — Offline navigation'},
-  {tier:2,domain:3,q:'What is your evacuation strategy for leaving the city on foot?',opts:[{k:'A',l:'Planned route through courtyards/forest, avoiding highways',s:2},{k:'B',l:'Walk along the main road',s:1},{k:'C',l:'Don\'t consider a walking option',s:0}],ref:'Chapter 5.3 — On-foot evacuation routes'},
-  {tier:2,domain:4,q:'Your appearance during a crisis — "Grey Man" strategy?',opts:[{k:'A',l:'Civilian, inconspicuous clothing, no expensive gear',s:2},{k:'B',l:'Dress as usual',s:1},{k:'C',l:'Military/multicam style (draws suspicion)',s:0}],ref:'Chapter 9.1 — Grey Man strategy'},
-  {tier:2,domain:4,q:'Your response to an unexpected knock at the door from a stranger?',opts:[{k:'A',l:'Dialogue through closed door, demonstrate group presence',s:2},{k:'B',l:'Won\'t open at all',s:1},{k:'C',l:'Open the door to help',s:0}],ref:'Chapter 9.5 — Door security protocols'},
-  {tier:2,domain:4,q:'Do you know 4 vulnerable zones of the human body for self-defence?',opts:[{k:'A',l:'Yes — eyes, throat, groin, knees',s:2},{k:'B',l:'Roughly understand',s:1},{k:'C',l:'Cannot defend myself',s:0}],ref:'Chapter 9.3 — Self-defence basics'},
-  {tier:2,domain:4,q:'What is your tactic when passing checkpoints?',opts:[{k:'A',l:'Calm, hands visible, brief truth, no aggression',s:2},{k:'B',l:'Try to be inconspicuous',s:1},{k:'C',l:'Argue and assert rights',s:0}],ref:'Chapter 14.2 — Checkpoint behaviour'},
-  {tier:2,domain:0,q:'Do you have a "digital envelope" (passwords, document copies on cloud/flash drive)?',opts:[{k:'A',l:'Yes — encrypted and accessible offline',s:2},{k:'B',l:'Photos in phone',s:1},{k:'C',l:'None',s:0}],ref:'Chapter 2.7 — Digital documents'},
-  {tier:2,domain:4,q:'What do you have for barter with neighbours?',opts:[{k:'A',l:'Salt, alcohol, batteries, lighters',s:2},{k:'B',l:'Only money',s:1},{k:'C',l:'Nothing to spare',s:0}],ref:'Chapter 11.3 — Barter goods'},
-  {tier:2,domain:3,q:'Does each family member have their own emergency backpack?',opts:[{k:'A',l:'Yes — weight matched to each person\'s capacity',s:2},{k:'B',l:'One pack for everyone',s:1},{k:'C',l:'No bags assembled',s:0}],ref:'Chapter 3.5 — Personal go-bags'},
-  {tier:2,domain:6,q:'What are your actions in the event of a chlorine threat (chemical accident)?',opts:[{k:'A',l:'Move to upper floors, seal the room',s:2},{k:'B',l:'Run outside',s:1},{k:'C',l:'Go down to the basement',s:0}],ref:'Chapter 12.1 — Chemical threat response'},
-  {tier:2,domain:6,q:'Do you know the dosage of potassium iodide for your age?',opts:[{k:'A',l:'Yes — have the medication and instructions',s:2},{k:'B',l:'Don\'t have the medication',s:1},{k:'C',l:'Will drink a whole bottle of iodine',s:0}],ref:'Chapter 12.3 — Radiation protection'},
-  {tier:2,domain:6,q:'What are your actions during artillery shelling on the street?',opts:[{k:'A',l:'Drop to ground, cover head, open mouth',s:2},{k:'B',l:'Run to the nearest building entrance',s:1},{k:'C',l:'Stand and watch where it\'s exploding',s:0}],ref:'Chapter 14.3 — Shelling response'},
-  {tier:2,domain:4,q:'Are there any "passengers" in your group without functions?',opts:[{k:'A',l:'No — everyone has a role',s:2},{k:'B',l:'One or two',s:1},{k:'C',l:'Nobody knows what to do',s:0}],ref:'Chapter 6.1 — Group role assignment'},
-  {tier:2,domain:2,q:'Do you have a battery-powered radio (AM/FM)?',opts:[{k:'A',l:'Yes — with a large supply of batteries',s:2},{k:'B',l:'Only in the car',s:1},{k:'C',l:'No',s:0}],ref:'Chapter 8.2 — Emergency radio'},
-  {tier:2,domain:4,q:'How do you behave in a panicking crowd?',opts:[{k:'A',l:'Move on periphery, arms bent in front of chest',s:2},{k:'B',l:'Run with everyone in the centre',s:1},{k:'C',l:'Try to stop the crowd',s:0}],ref:'Chapter 5.1 — Crowd management'},
-  {tier:2,domain:4,q:'Does your cash supply consist of small denomination bills?',opts:[{k:'A',l:'Yes — significant portion is small bills',s:2},{k:'B',l:'Only large bills',s:1},{k:'C',l:'Money only on card',s:0}],ref:'Chapter 9.2 — Cash preparation'},
-  {tier:2,domain:3,q:'Can you navigate without GPS (sun, stars, compass)?',opts:[{k:'A',l:'Yes — know 3–4 reliable methods',s:2},{k:'B',l:'Roughly understand cardinal directions',s:1},{k:'C',l:'Completely dependent on GPS',s:0}],ref:'Chapter 2.6 — Non-GPS navigation'},
-  {tier:2,domain:0,q:'Do you know where the main water and gas shut-off valves are in your building?',opts:[{k:'A',l:'Yes — have access and the tools',s:2},{k:'B',l:'Roughly know',s:1},{k:'C',l:'Don\'t know',s:0}],ref:'Chapter 3.1 — Utility shut-offs'},
-  {tier:2,domain:0,q:'How do you plan to wash clothes without electricity for more than 2 weeks?',opts:[{k:'A',l:'Soap supply + hand-washing/wringing system',s:2},{k:'B',l:'In the sink by hand',s:1},{k:'C',l:'Wear until completely dirty',s:0}],ref:'Chapter 4.5 — Off-grid hygiene'},
-  {tier:2,domain:0,q:'Do you have a supply of hygiene wipes (dry shower) for a month?',opts:[{k:'A',l:'Yes — bulk supply for each person',s:2},{k:'B',l:'2–3 packs',s:1},{k:'C',l:'None',s:0}],ref:'Chapter 6.9 — Personal hygiene supplies'},
-  {tier:2,domain:4,q:'Your response to looting in neighbours\' homes?',opts:[{k:'A',l:'Strengthen own defence and coordinate with neighbours',s:2},{k:'B',l:'Call the police',s:1},{k:'C',l:'Go look at what\'s happening',s:0}],ref:'Chapter 9.5 — Community security response'},
-  {tier:2,domain:3,q:'Do you have footwear tested on a 30 km walk?',opts:[{k:'A',l:'Yes — worn-in trekking boots',s:2},{k:'B',l:'Comfortable urban trainers',s:1},{k:'C',l:'Only dress shoes / new footwear',s:0}],ref:'Chapter 7.3 — Footwear for evacuation'},
-  {tier:2,domain:2,q:'Can you siphon fuel from another vehicle?',opts:[{k:'A',l:'Yes — have a hose and know safety rules',s:2},{k:'B',l:'Theoretically know how',s:1},{k:'C',l:'No',s:0}],ref:'Chapter 8.3 — Fuel acquisition'},
-  {tier:2,domain:6,q:'What is your plan if stuck in a lift during shelling?',opts:[{k:'A',l:'Have a "lift kit" (water, torch, whistle)',s:2},{k:'B',l:'Wait for help',s:1},{k:'C',l:'Try to force the doors',s:0}],ref:'Chapter 14.1 — Lift entrapment protocol'},
-  {tier:2,domain:6,q:'Do you know the "box breathing" technique for stress management?',opts:[{k:'A',l:'Yes — practise it regularly',s:2},{k:'B',l:'Have heard of it',s:1},{k:'C',l:'No',s:0}],ref:'Chapter 8.7 — Stress and psychology'},
-  {tier:2,domain:2,q:'Do you have lighters and a fire-starter (minimum 5–10)?',opts:[{k:'A',l:'Yes — distributed across different bags',s:2},{k:'B',l:'Have 1–2',s:1},{k:'C',l:'Use only an electric stove',s:0}],ref:'Chapter 11.3 — Fire-starting supplies'},
-  {tier:2,domain:3,q:'How do you rate your winter clothing (layering system)?',opts:[{k:'A',l:'Thermal base layer, fleece and membrane',s:2},{k:'B',l:'Have a warm coat/down jacket',s:1},{k:'C',l:'Only light urban clothing',s:0}],ref:'Chapter 7.3 — Layered clothing system'},
-  {tier:2,domain:1,q:'Do you have copies of medical records and prescriptions?',opts:[{k:'A',l:'Yes — in the emergency backpack',s:2},{k:'B',l:'All data on phone',s:1},{k:'C',l:'None',s:0}],ref:'Chapter 2.3 — Medical documentation'},
-  {tier:2,domain:1,q:'How do you protect food supplies from mice and insects?',opts:[{k:'A',l:'Airtight glass/metal containers',s:2},{k:'B',l:'Plastic containers',s:1},{k:'C',l:'In store packaging',s:0}],ref:'Chapter 8.4 — Food storage security'},
-  {tier:2,domain:1,q:'Can you provide first aid for carbon monoxide poisoning?',opts:[{k:'A',l:'Yes — know the symptoms and first steps',s:2},{k:'B',l:'Theoretically',s:1},{k:'C',l:'No',s:0}],ref:'Chapter 7.2 — Carbon monoxide response'},
-  {tier:2,domain:2,q:'What is your level of proficiency with tools (crowbar, hacksaw, multitool)?',opts:[{k:'A',l:'High — use them regularly',s:2},{k:'B',l:'Average',s:1},{k:'C',l:'Cannot use tools',s:0}],ref:'Chapter 6.5 — Tool proficiency'},
-  {tier:2,domain:4,q:'Do you have a paper contact list for family (in case your phone dies)?',opts:[{k:'A',l:'Yes — each family member carries one',s:2},{k:'B',l:'Only in my wallet',s:1},{k:'C',l:'All contacts only in phone memory',s:0}],ref:'Chapter 2.8 — Paper contact list'},
-  {tier:2,domain:2,q:'Do you know how to safely make a fire on a balcony as a last resort?',opts:[{k:'A',l:'Yes — know about "rocket stove" and safety rules',s:2},{k:'B',l:'Have a camp stove',s:1},{k:'C',l:'No options',s:0}],ref:'Chapter 4.3 — Emergency indoor fire'},
-  {tier:2,domain:6,q:'Your readiness to act without orders from above?',opts:[{k:'A',l:'Have an autonomous plan and act on it',s:2},{k:'B',l:'Wait for instructions from authorities',s:1},{k:'C',l:'Go with the flow',s:0}],ref:'Chapter 8.5 — Autonomous decision-making'},
-  {tier:2,domain:1,q:'Do you know the locations of 3 nearest water sources (besides tap water)?',opts:[{k:'A',l:'Yes — checked them personally',s:2},{k:'B',l:'Know one',s:1},{k:'C',l:'Don\'t know any',s:0}],ref:'Chapter 2.2 — Alternative water sources'},
-  {tier:2,domain:6,q:'Your answer to: "Why should I prepare?"',opts:[{k:'A',l:'Preparation is a way to stay calm and preserve resources',s:2},{k:'B',l:'It\'s "just in case"',s:1},{k:'C',l:'It\'s paranoia',s:0}],ref:'Chapter 0.1 — The case for preparedness'},
+const DOMAINS = [
+  'Housing & Basics',       // 0
+  'Water, Food & Medical',  // 1
+  'Energy & Equipment',     // 2
+  'Evacuation & Movement',  // 3
+  'Security & Community',   // 4
 ];
 
-/* ═══════════════════════════════════════════════
-   CALCULATOR STATE
-═══════════════════════════════════════════════ */
-let selTierVal = 1, userEmail = '', curQ = 0, answers = [], activeQs = [];
+const QUESTIONS = [
+  {domain:0, q:'Where do you live?',                           opts:[{k:'A',l:'Private house — autonomous',s:2},{k:'B',l:'Apartment, floors 0–5',s:1},{k:'C',l:'Apartment, floor 6+ (lift/pump dependent)',s:0}], ref:'Chapter 3.1 — Housing types and their risks'},
+  {domain:3, q:'How quickly could you evacuate your home if necessary?', opts:[{k:'A',l:'Under 15 minutes — everything is packed',s:2},{k:'B',l:'15–30 minutes',s:1},{k:'C',l:'More than 30 minutes',s:0}], ref:'Chapter 3.5 — Rapid evacuation algorithm'},
+  {domain:3, q:'How far do you live from the nearest city centre?', opts:[{k:'A',l:'Far enough to avoid the epicentre of events',s:2},{k:'B',l:'5–20 km',s:1},{k:'C',l:'Less than 5 km — high risk/panic zone',s:0}], ref:'Chapter 5.1 — Urban logistics in crisis'},
+  {domain:1, q:'How much food and water do you have stored at home?', opts:[{k:'A',l:'72+ hours of supply',s:2},{k:'B',l:'24–48 hours',s:1},{k:'C',l:'None / less than a day',s:0}], ref:'Chapter 2.2 — Water and food: minimum calculation'},
+  {domain:1, q:'Do you have emergency cash at home?',           opts:[{k:'A',l:'Yes — enough for 2+ weeks',s:2},{k:'B',l:'A small amount',s:1},{k:'C',l:'No — everything on cards',s:0}], ref:'Chapter 2.7 — Financial security'},
+  {domain:1, q:'Do you have a first aid kit at home?',          opts:[{k:'A',l:'Full kit + first aid training',s:2},{k:'B',l:'Basic kit',s:1},{k:'C',l:'None',s:0}], ref:'Chapter 7.1 — Tactical and civilian first aid kit'},
+  {domain:2, q:'Is there an alternative heating source in your home?', opts:[{k:'A',l:'Generator, solar panels or wood stove',s:2},{k:'B',l:'Gas heater or portable solutions',s:1},{k:'C',l:'No — only central heating',s:0}], ref:'Chapter 4.4 — Energy independence and heat'},
+  {domain:4, q:'Do you have a family communication plan for emergencies?', opts:[{k:'A',l:'Yes — clear, written, known by everyone',s:2},{k:'B',l:'Discussed verbally (informal)',s:1},{k:'C',l:'No plan',s:0}], ref:'Chapter 2.8 — Communication protocols'},
+  {domain:4, q:'How well do you know your neighbours?',         opts:[{k:'A',l:'High trust — ready for mutual cooperation',s:2},{k:'B',l:'Know them by face, greet occasionally',s:1},{k:'C',l:'Not at all',s:0}], ref:'Chapter 6.3 — Social capital of the building'},
+  {domain:3, q:'Do you have a plan for where to go if your home is unusable for a week?', opts:[{k:'A',l:'Yes — two specific options with routes',s:2},{k:'B',l:'Roughly know (friends/parents)',s:1},{k:'C',l:'No idea',s:0}], ref:'Chapter 5.2 — Evacuation plan'},
+  {domain:0, q:'How would you rate your physical fitness for emergency situations?', opts:[{k:'A',l:'High — able to walk 20+ km with a backpack',s:2},{k:'B',l:'Average',s:1},{k:'C',l:'Low — tire quickly',s:0}], ref:'Chapter 2.3 — Physical resources'},
+  {domain:4, q:'Do you know local emergency services and procedures?', opts:[{k:'A',l:'Yes — including local resilience hubs and shelters',s:2},{k:'B',l:'Vaguely',s:1},{k:'C',l:'Have not looked into it',s:0}], ref:'Chapter 14.1 — Interaction with emergency services'},
+  {domain:0, q:'How do you monitor news and emerging threats?', opts:[{k:'A',l:'Multiple verified sources + battery-powered radio',s:2},{k:'B',l:'Scrolling social media feeds',s:1},{k:'C',l:'Don\'t monitor at all',s:0}], ref:'Chapter 2.1 — Information hygiene'},
+  {domain:3, q:'What is the status of your vehicle in terms of preparedness?', opts:[{k:'A',l:'Always above half a tank + assembled car kit',s:2},{k:'B',l:'Half tank, vehicle in good condition',s:1},{k:'C',l:'Empty tank or no vehicle',s:0}], ref:'Chapter 3.6 — Vehicle preparation'},
+  {domain:1, q:'Do you have a water filtration method that works without electricity?', opts:[{k:'A',l:'Yes — gravity filter, LifeStraw, or tablets',s:2},{k:'B',l:'I have iodine tablets only',s:1},{k:'C',l:'No — I rely entirely on tap water',s:0}], ref:'Chapter 3.3 — Water disinfection methods'},
+  {domain:2, q:'Do you have a way to charge devices without grid power for 3+ days?', opts:[{k:'A',l:'Solar panel, car inverter, or large power station',s:2},{k:'B',l:'A portable power bank (10,000+ mAh)',s:1},{k:'C',l:'No backup — dependent on the grid',s:0}], ref:'Chapter 2.4 — Off-grid charging'},
+  {domain:0, q:'Do you know where the main water and gas shut-off valves are in your building?', opts:[{k:'A',l:'Yes — have access and know the procedure',s:2},{k:'B',l:'Roughly know where they are',s:1},{k:'C',l:'No idea',s:0}], ref:'Chapter 3.1 — Utility shut-offs'},
+  {domain:4, q:'Do you have a paper contact list with key family numbers (not only in your phone)?', opts:[{k:'A',l:'Yes — carried by every adult in the household',s:2},{k:'B',l:'I have one copy somewhere at home',s:1},{k:'C',l:'All contacts are only in phone memory',s:0}], ref:'Chapter 2.8 — Paper contact list'},
+];
 
-function selTier(t) {
-  selTierVal = t;
-  document.getElementById('topt1').classList.toggle('selected', t===1);
-  document.getElementById('topt2').classList.toggle('selected', t===2);
-}
 
-function startAssessment() {
-  const el = document.getElementById('emailInput');
-  userEmail = el.value.trim();
-  if(!userEmail || !userEmail.includes('@')) { el.classList.add('error'); el.focus(); return; }
-  el.classList.remove('error');
-  activeQs = selTierVal === 2 ? QUESTIONS : QUESTIONS.filter(q => q.tier===1);
-  answers = new Array(activeQs.length).fill(null);
-  document.getElementById('calcTierLabel').textContent = selTierVal===1 ? 'Tier 1 — Baseline Assessment' : 'Tier 2 — Deep Risk Analysis';
-  document.getElementById('calcMetaTxt').innerHTML = `<b>${activeQs.length}</b> questions · ~${Math.round(activeQs.length*0.2)} minutes`;
-  buildDots();
-  showQ(0); showSc('sc-q');
-}
-
-function buildDots() {
-  const total = Math.min(activeQs.length, 18);
-  document.getElementById('stepDots').innerHTML = Array.from({length:total}, (_,i) => `<div class="sdot" id="dot${i}"></div>`).join('');
-}
-
-function showQ(idx) {
-  curQ = idx;
-  const q = activeQs[idx];
-  document.getElementById('qCatBand').textContent = DOMAINS[q.domain];
-  document.getElementById('qNum').textContent = idx+1;
-  document.getElementById('qTotal').textContent = activeQs.length;
-  document.getElementById('qText').textContent = q.q;
-  document.getElementById('optsList').innerHTML = q.opts.map((o,i) => `
-    <div class="opt-row${answers[idx]===i?' sel':''}" onclick="pickOpt(${i})">
-      <div class="opt-key">${o.k}</div>
-      <div class="opt-txt">${o.l}</div>
-      <div class="opt-score">${o.s===2?'●●':o.s===1?'●○':'○○'}</div>
-    </div>`).join('');
-  const last = idx === activeQs.length-1;
-  const btn = document.getElementById('btnNext');
-  btn.innerHTML = last ? 'See Results <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' : 'Next <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-  setNext(answers[idx]!==null);
-  document.getElementById('btnBack').style.visibility = idx===0?'hidden':'visible';
-  const pct = (idx/activeQs.length)*100;
-  document.getElementById('calcProgressFill').style.width = pct+'%';
-  for(let i=0;i<Math.min(activeQs.length,18);i++){
-    const d=document.getElementById('dot'+i);
-    if(d) d.className='sdot'+(i<idx?' done':i===idx?' cur':'');
-  }
-  const sc = document.getElementById('sc-q');
-  sc.style.animation='none'; sc.offsetHeight; sc.style.animation='fadeUp 0.35s ease both';
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function pickOpt(i) {
-  answers[curQ]=i;
-  document.querySelectorAll('.opt-row').forEach((el,j) => el.classList.toggle('sel',j===i));
-  setNext(true);
-}
-
-function setNext(on) {
-  const b=document.getElementById('btnNext');
-  b.disabled=!on; b.style.opacity=on?'1':'0.4'; b.style.cursor=on?'pointer':'not-allowed';
-}
-
-function goNext() {
-  if(answers[curQ]===null) return;
-  if(curQ < activeQs.length-1) { showQ(curQ+1); }
-  else { finish(); }
-}
-
-function goBack() { if(curQ>0) showQ(curQ-1); }
-
-function finish() {
-  document.getElementById('calcProgressFill').style.width='95%';
-  if(selTierVal===2) { showSc('sc-gen'); setTimeout(showResults2, 2800); }
-  else showResults1();
-}
-
-/* ─── Results ─── */
-function calcTotal(qs, ans) { return qs.reduce((s,q,i) => s+(ans[i]!==null?q.opts[ans[i]].s:0), 0); }
-
-function calcDomains(qs, ans) {
-  const d={};
-  qs.forEach((q,i) => {
-    if(!d[q.domain]) d[q.domain]={s:0,m:0};
-    d[q.domain].s += ans[i]!==null?q.opts[ans[i]].s:0;
-    d[q.domain].m += 2;
-  });
-  return d;
-}
-
-function getTier(pct) {
-  if(pct>=80) return {name:'HIGHLY RESILIENT',color:'#2A6B42',desc:'Exceptional preparedness. You have built real capability across multiple domains. Focus on community leadership and your remaining gaps.'};
-  if(pct>=60) return {name:'PREPARED',color:'#8B6914',desc:'Solid foundation with identified gaps. Address your weak domains systematically to achieve high resilience within 90 days.'};
-  if(pct>=40) return {name:'DEVELOPING',color:'#8B5E14',desc:'You understand preparedness but significant gaps remain. Prioritise the immediate actions in your weakest domains first.'};
-  return {name:'VULNERABLE',color:'#B02A1A',desc:'Critical preparedness gaps identified. Start with water, food, and communication basics immediately — these cost little and save lives.'};
-}
-
-function animCount(id, target) {
-  let n=0; const el=document.getElementById(id); const step=Math.max(1,Math.round(target/45));
-  const iv=setInterval(()=>{n=Math.min(n+step,target);el.textContent=n;if(n>=target)clearInterval(iv);},30);
-}
-
-function renderDomains(cid, qs, ans) {
-  const d=calcDomains(qs,ans);
-  const el=document.getElementById(cid);
-  el.innerHTML=Object.entries(d).map(([di,v])=>{
-    const p=Math.round((v.s/v.m)*100);
-    const c=p>=70?'var(--success)':p>=40?'var(--accent)':'var(--danger)';
-    return `<div class="domain-row"><div class="dr-top"><div class="dr-name">${DOMAINS[di]}</div><div class="dr-score" style="color:${c}">${v.s}/${v.m} · ${p}%</div></div><div class="dr-bar"><div class="dr-fill" data-w="${p}%" style="background:${c}"></div></div></div>`;
-  }).join('');
-  setTimeout(()=>{ el.querySelectorAll('.dr-fill').forEach(e=>e.style.width=e.dataset.w); },200);
-}
-
-function showResults1() {
-  showSc('sc-r1');
-  document.getElementById('calcProgressFill').style.width='100%';
-  const max=activeQs.length*2, total=calcTotal(activeQs,answers), pct=Math.round((total/max)*100);
-  setTimeout(()=>{
-    animCount('sc1num',total);
-    document.getElementById('sc1den').textContent=`/ ${max}`;
-    document.getElementById('sc1pct').textContent=pct+'%';
-    const c=2*Math.PI*80, off=c-(c*pct/100);
-    const ring=document.getElementById('ring1');
-    ring.style.strokeDashoffset=off;
-    const t=getTier(pct);
-    ring.style.stroke=t.color;
-    document.getElementById('st1name').textContent=t.name;
-    document.getElementById('st1name').style.color=t.color;
-    document.getElementById('st1desc').textContent=t.desc;
-  },100);
-  renderDomains('dl1',activeQs,answers);
-  // Refs
-  const weak=activeQs.map((q,i)=>answers[i]!==null&&q.opts[answers[i]].s<2?{q:q.q,a:q.opts[answers[i]].l,s:q.opts[answers[i]].s,ref:q.ref}:null).filter(Boolean);
-  document.getElementById('refsWrap').style.display=weak.length?'block':'none';
-  document.getElementById('refsList').innerHTML=weak.map(w=>`
-    <div class="ref-item">
-      <div class="ref-q">${w.q}</div>
-      <div class="ref-ans">Your answer: "${w.a}" — ${w.s===1?'Vulnerable':'Critical risk'}</div>
-      <div class="ref-ch">📖 ${w.ref}</div>
-    </div>`).join('');
-  // Save
-  saveResult(total,max,pct,1);
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function showResults2() {
-  showSc('sc-r2');
-  document.getElementById('calcProgressFill').style.width='100%';
-  const max=activeQs.length*2, total=calcTotal(activeQs,answers), pct=Math.round((total/max)*100);
-  setTimeout(()=>{
-    animCount('sc2num',total);
-    document.getElementById('sc2den').textContent=`/ ${max}`;
-    const c=2*Math.PI*80, off=c-(c*pct/100);
-    const ring=document.getElementById('ring2');
-    ring.style.strokeDashoffset=off;
-    const t=getTier(pct);
-    ring.style.stroke=t.color;
-    document.getElementById('st2name').textContent=t.name;
-    document.getElementById('st2name').style.color=t.color;
-    document.getElementById('st2desc').textContent=t.desc;
-  },100);
-  renderDomains('dl2',activeQs,answers);
-  renderAI(total,max,pct);
-  saveResult(total,max,pct,2);
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function renderAI(score,max,pct) {
-  const ds=calcDomains(activeQs,answers);
-  const sorted=Object.entries(ds).map(([d,v])=>({name:DOMAINS[d],pct:Math.round((v.s/v.m)*100)})).sort((a,b)=>a.pct-b.pct);
-  const weak=sorted[0], strong=sorted[sorted.length-1];
-  const recs={
-    'Housing & Basics':'Audit your living situation for utility dependencies. Identify vulnerabilities in your building type and floor level.',
-    'Water, Food & Medical':'Build a 72-hour water reserve immediately. Acquire a non-electric filter. Calculate your caloric needs and stock accordingly.',
-    'Energy & Equipment':'Invest in headlamps, a power bank, and a battery radio. Establish fuel reserves with proper metal canisters.',
-    'Evacuation & Movement':'Walk your evacuation route today. Assemble a tested 72-hour go-bag per person. Identify 3 water sources on a paper map.',
-    'Security & Community':'Introduce yourself to 3 neighbours this week. Discuss a mutual aid arrangement. Learn the Grey Man principle.',
-    'Advanced Readiness':'Complete a first aid course. Build encrypted offline document backups. Train the STOP protocol.',
-    'Threats & Psychology':'Study chemical threat protocols. Practice box breathing daily. Develop an autonomous decision plan.'
-  };
-  const tl=[
-    ['Store 72h water supply','Assemble one go-bag','Buy a battery radio'],
-    ['Extend food to 2 weeks','Scout evacuation routes on foot','Enrol in first aid course'],
-    ['Reach 1-month food reserve','Establish neighbour network','Run full evacuation drill']
-  ];
-  document.getElementById('aiBody').innerHTML=`
-    <div class="ai-sec">
-      <div class="ai-sec-title">📊 Executive Summary</div>
-      <div class="ai-txt">Based on your responses across <strong>${activeQs.length} preparedness indicators</strong>, your overall resilience is <strong>${score}/${max} (${pct}%)</strong>. ${getTier(pct).desc} Your strongest domain is <strong>${strong.name} (${strong.pct}%)</strong>; your most critical gap is <strong>${weak.name} (${weak.pct}%)</strong>.</div>
-    </div>
-    <div class="ai-sec">
-      <div class="ai-sec-title">⚠️ Critical Vulnerabilities</div>
-      <ul class="ai-list">${sorted.slice(0,3).map(d=>`<li class="ai-li"><strong>${d.name}</strong> — ${d.pct}% readiness. ${recs[d.name]||''}</li>`).join('')}</ul>
-    </div>
-    <div class="ai-sec">
-      <div class="ai-sec-title">🗓 30/60/90-Day Action Plan</div>
-      <div class="tl-grid">
-        ${tl.map((items,i)=>`<div class="tl-col"><span class="tl-lbl">${['30 Days — Immediate','60 Days — Build','90 Days — Sustain'][i]}</span>${items.map(t=>`<div class="tl-item">${t}</div>`).join('')}</div>`).join('')}
-      </div>
-    </div>
-    <div class="ai-sec">
-      <div class="ai-sec-title">💡 Scenario Analysis</div>
-      <div class="ai-txt">Given your profile, your highest-risk scenario involves <strong>${weak.name.toLowerCase()}</strong> failure. Your current preparation provides approximately <strong>${Math.round(pct*0.8+5)} days of autonomous capability</strong> before requiring external support. Targeted improvements in ${weak.name} could extend this to <strong>${Math.round(pct*1.2+15)} days or more</strong>.</div>
-    </div>`;
-}
-
-function saveResult(score,max,pct,tier) {
-  try {
-    localStorage.setItem('cr_result', JSON.stringify({date:new Date().toISOString(),score,max,pct,tier,email:userEmail}));
-  } catch(e){}
-}
-
-function upgradeTier2() {
-  selTierVal=2; activeQs=QUESTIONS; answers=new Array(QUESTIONS.length).fill(null);
-  document.getElementById('calcTierLabel').textContent='Tier 2 — Deep Risk Analysis';
-  document.getElementById('calcMetaTxt').innerHTML=`<b>64</b> questions · ~13 minutes`;
-  buildDots(); showQ(0); showSc('sc-q');
-}
-
-function restartCalc() {
-  answers=[]; curQ=0;
-  document.getElementById('emailInput').value='';
-  document.getElementById('calcProgressFill').style.width='0%';
-  showSc('sc-email');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function showSc(id) {
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  const showHeader = !['sc-email','sc-r1','sc-r2'].includes(id);
-  document.querySelector('.calc-header').style.display = showHeader?'block':'none';
-}
-
-/* ═══════════════════════════════════════════════
-   CABINET
-═══════════════════════════════════════════════ */
 const CHECKLIST = [
-  {t:'Store 72 hours of water (2L/person/day)', ch:'Ch. 2.2'},
-  {t:'Assemble a first aid kit + take a course', ch:'Ch. 7.1'},
+  {t:'Store 72 hours of water (2L/person/day)',    ch:'Ch. 2.2'},
+  {t:'Assemble a first aid kit + take a course',  ch:'Ch. 7.1'},
   {t:'Write a family emergency communication plan', ch:'Ch. 2.8'},
   {t:'Build a 2-week food reserve at 1500 kcal/day', ch:'Ch. 2.2'},
   {t:'Prepare emergency cash in small denominations', ch:'Ch. 2.7'},
   {t:'Assemble a 72-hour go-bag per family member', ch:'Ch. 3.5'},
-  {t:'Buy a battery-powered AM/FM radio', ch:'Ch. 8.2'},
+  {t:'Buy a battery-powered AM/FM radio',          ch:'Ch. 8.2'},
   {t:'Acquire a non-electric water filtration method', ch:'Ch. 3.3'},
-  {t:'Introduce yourself to three neighbours', ch:'Ch. 6.3'},
-  {t:'Walk your evacuation route on foot', ch:'Ch. 5.2'},
+  {t:'Introduce yourself to three neighbours',     ch:'Ch. 6.3'},
+  {t:'Walk your evacuation route on foot',         ch:'Ch. 5.2'},
   {t:'Print and laminate emergency contact numbers', ch:'Ch. 2.8'},
   {t:'Visit the 3 nearest alternative water sources', ch:'Ch. 2.2'},
   {t:'Buy potassium iodide tablets + learn dosage', ch:'Ch. 12.3'},
-  {t:'Set up blackout curtains or window film', ch:'Ch. 3.3'},
+  {t:'Set up blackout curtains or window film',    ch:'Ch. 3.3'},
   {t:'Acquire headlamps for each household member', ch:'Ch. 2.4'},
   {t:'Practice box breathing technique for 5 days', ch:'Ch. 8.7'},
   {t:'Locate your building\'s water and gas shut-offs', ch:'Ch. 3.1'},
   {t:'Encrypt and back up important documents offline', ch:'Ch. 2.7'},
 ];
 
-function loadCabinet() {
-  let r; try { r=JSON.parse(localStorage.getItem('cr_result')); } catch(e){}
-  if(!r) { document.getElementById('cab-empty').style.display='block'; document.getElementById('cab-dash').style.display='none'; return; }
-  document.getElementById('cab-empty').style.display='none';
-  document.getElementById('cab-dash').style.display='block';
-  const t=getTier(r.pct);
-  const d=new Date(r.date);
-  document.getElementById('ds-score').textContent=`${r.score}/${r.max}`;
-  document.getElementById('ds-pct').textContent=r.pct+'%';
-  document.getElementById('ds-tier').textContent=t.name.split(' ')[0];
-  document.getElementById('ds-date').textContent=d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});
-  document.getElementById('csc-date-str').textContent=d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
-  document.getElementById('csc-big').textContent=r.score;
-  document.getElementById('csc-big').style.color=t.color;
-  document.getElementById('csc-denom').textContent=`/ ${r.max} pts`;
-  document.getElementById('csc-tier-h').textContent=t.name;
-  document.getElementById('csc-tier-h').style.color=t.color;
-  document.getElementById('csc-tier-p').textContent=t.desc;
-  // Domain bars (estimated from pct)
-  document.getElementById('cab-domains').innerHTML=DOMAINS.slice(0,5).map((name,i)=>{
-    const v=Math.max(0,Math.min(100,Math.round(r.pct+(Math.sin(r.score*(i+1)*7)*22))));
-    const c=v>=70?'var(--success)':v>=40?'var(--accent)':'var(--danger)';
-    return `<div class="cab-domain-row"><div class="cdn-name">${name}</div><div class="cdn-rail"><div class="cdn-fill" data-w="${v}%" style="background:${c}"></div></div><div class="cdn-pct" style="color:${c}">${v}%</div></div>`;
-  }).join('');
-  setTimeout(()=>document.querySelectorAll('.cdn-fill').forEach(e=>e.style.width=e.dataset.w),200);
-  loadChecklist();
-}
+</script>
+<script>
+// ═══════════════════════════════════════
+// ARTICLES AND CHAPTERS DATA
+// To add an article: copy any {...} block inside ARTICLES and add to the array
+// To add a chapter: copy any {n:..,t:..,s:..} block inside CHAPTERS
+// ═══════════════════════════════════════
 
-function loadChecklist() {
-  let saved={}; try{saved=JSON.parse(localStorage.getItem('cr_cl')||'{}');}catch(e){}
-  document.getElementById('checklistEl').innerHTML=CHECKLIST.map((item,i)=>{
-    const c=saved[i];
-    return `<div class="cl-item${c?' checked':''}" onclick="toggleCl(${i})"><div class="cl-box">${c?'✓':''}</div><div><div class="cl-text">${item.t}</div><div class="cl-ch">${item.ch}</div></div></div>`;
-  }).join('');
-}
-
-function toggleCl(i) {
-  let saved={}; try{saved=JSON.parse(localStorage.getItem('cr_cl')||'{}');}catch(e){}
-  saved[i]=!saved[i];
-  localStorage.setItem('cr_cl',JSON.stringify(saved));
-  loadChecklist();
-}
-
-function clearCabinet() {
-  if(confirm('Clear all assessment data and checklist progress?')) {
-    localStorage.removeItem('cr_result'); localStorage.removeItem('cr_cl'); loadCabinet();
-  }
-}
-
-/* ═══════════════════════════════════════════════
-   INTEL HUB DATA
-═══════════════════════════════════════════════ */
 const ARTICLES = [
   {id:0,cat:'water',catL:'Water & Food',ch:'Ch. 2.2',title:'The Complete Water Security Protocol',expt:'Three-tier system: storage, filtration, and natural sourcing with precise calculations for your household.',time:'15 min',
   content:`<h4>Why Water Comes First</h4><p>The human body survives <strong>3–5 days without water</strong> — less than almost any other threat. In any serious crisis, your water situation determines your survival timeline more than any other single factor.</p><h4>Tier 1: Static Storage</h4><p>Minimum is <strong>2 litres per person per day</strong>. A family of four needs 24 litres for 72 hours, 112 litres for 2 weeks. Store in food-grade containers, out of direct sunlight. Rotate every 12 months.</p><h4>Tier 2: Filtration Capability</h4><p>Stored water runs out. The Sawyer Squeeze, Berkey gravity filter, or LifeStraw remove bacteria and protozoa without electricity. Supplement with iodine tablets. Learn the <strong>SODIS method</strong> (solar disinfection) as a zero-cost backup.</p><h4>Tier 3: Identified Sources</h4><p>Map 3 water sources within 5 km: rivers, lakes, wells, building tanks. Visit them in advance. Mark them on a paper map. Know which require treatment.</p><h4>Emergency Source: Your Own Building</h4><p>Most buildings hold 50–200 litres in the heating system and boiler. Learn to drain it using the lowest-point drain valve. This water requires boiling but is a critical reserve. Practice the technique before you need it.</p>`},
@@ -2165,6 +1566,7 @@ const ARTICLES = [
   {id:8,cat:'security',catL:'Security',ch:'Ch. 14.2',title:'Checkpoint Behaviour: How to Pass Safely',expt:'The psychology and practice of interacting with armed checkpoints without escalating risk.',time:'5 min',
   content:`<h4>The Psychology</h4><p>People at checkpoints in crisis situations are often stressed and primed to see threats. Your job is to <strong>remove all ambiguity about your intentions</strong> and reduce their cognitive load.</p><h4>The Protocol</h4><p>Approach slowly. Hands visible. Window down before being asked. Documents ready. Speak calmly. <strong>Do not volunteer information beyond what is asked.</strong> Do not argue, assert rights, or demand explanations. The goal is to be completely unremarkable.</p><h4>What Not to Do</h4><p>Never reach suddenly into bags or glove compartments. Never make sudden movements. Never try to be charming in a way that could be misread. If you don't understand an instruction, ask calmly for clarification — never pretend you understood and do the wrong thing.</p>`},
 ];
+
 
 const CHAPTERS = [
   {n:'0.1',t:'The Case for Preparedness',s:'Why competence is insurance'},
@@ -2187,57 +1589,874 @@ const CHAPTERS = [
   {n:'14.3',t:'Shelling Response',s:'What to do when under fire'},
 ];
 
-let activeFilter='all';
-
-function setFilter(f, btn) {
-  activeFilter=f;
-  document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  renderArticles();
-}
-
-function renderArticles() {
-  const q=(document.getElementById('intelSearch')||{}).value?.toLowerCase()||'';
-  document.getElementById('articlesGrid').innerHTML = ARTICLES.map(a=>{
-    const mf=activeFilter==='all'||a.cat===activeFilter;
-    const ms=!q||a.title.toLowerCase().includes(q)||a.expt.toLowerCase().includes(q);
-    return `<div class="art-card${!mf||!ms?' hidden':''}" onclick="openArticle(${a.id})">
-      <div class="art-cat">${a.catL}</div>
-      <div class="art-title">${a.title}</div>
-      <div class="art-expt">${a.expt}</div>
-      <div class="art-foot"><span class="art-ch">${a.ch}</span><span class="art-time">${a.time}</span></div>
-    </div>`;
-  }).join('');
-}
-
-function renderChapters() {
-  document.getElementById('chapterGrid').innerHTML=CHAPTERS.map(c=>`
-    <div class="chap-card">
-      <div class="chap-num">${c.n}</div>
-      <div class="chap-title">${c.t}</div>
-      <div class="chap-sub">${c.s}</div>
-      <div class="chap-arr">→</div>
-    </div>`).join('');
-}
-
-function openArticle(id) {
-  const a=ARTICLES.find(x=>x.id===id); if(!a) return;
-  document.getElementById('modalCat').textContent=`${a.catL} · ${a.ch}`;
-  document.getElementById('modalTitle').textContent=a.title;
-  document.getElementById('modalContent').innerHTML=a.content;
-  document.getElementById('modalBg').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeModal(e) { if(e.target===document.getElementById('modalBg')) closeModalBtn(); }
-function closeModalBtn() { document.getElementById('modalBg').classList.remove('open'); document.body.style.overflow=''; }
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModalBtn(); });
-
-function subscribeNL() {
-  const el=document.getElementById('nlEmail');
-  if(!el.value.includes('@')) { el.style.borderColor='#e05c4b'; return; }
-  el.value=''; el.placeholder='✓ Subscribed!'; el.style.borderColor='rgba(90,175,133,0.7)';
-}
 </script>
+<script>
+/* ═══════════════════════════════════════════════════════════════════════
+   CIVILIAN RESILIENCE  ·  Storage Layer  ·  js/storage.js
+   ═══════════════════════════════════════════════════════════════════════
+
+   This file is the only place in the codebase that touches localStorage.
+   app.js calls Storage methods — it never references localStorage directly.
+
+   Why this boundary matters
+   ─────────────────────────
+   When Supabase (or any backend) is connected, only this file changes.
+   The entire application layer (app.js) migrates for free.
+
+   API
+   ───
+   Storage.saveResult(data)        → boolean  (true = success)
+   Storage.loadResult()            → object | null
+   Storage.saveChecklist(state)    → boolean
+   Storage.loadChecklist()         → object   (empty {} if nothing saved)
+   Storage.clear()                 → boolean
+
+   Storage keys
+   ────────────
+   cr_result   — JSON object: { date, score, max, pct, email, domains }
+   cr_cl       — JSON object: { [index]: boolean } — sparse checklist state
+   ═══════════════════════════════════════════════════════════════════════ */
+
+const Storage = {
+
+  /* ── Assessment result ──────────────────────────────────────────── */
+
+  saveResult(data) {
+    return _set('cr_result', data);
+  },
+
+  loadResult() {
+    const data = _get('cr_result');
+    if (!data) return null;
+
+    // Integrity check — reject structurally invalid data rather than
+    // letting the app crash with unhelpful errors downstream.
+    if (typeof data.score === 'undefined' || typeof data.pct === 'undefined') {
+      console.warn('Storage: result is missing required fields — discarding');
+      return null;
+    }
+
+    return data;
+  },
+
+  /* ── Checklist state ────────────────────────────────────────────── */
+
+  saveChecklist(state) {
+    return _set('cr_cl', state);
+  },
+
+  loadChecklist() {
+    // Returns {} (not null) so callers can always index into it safely
+    // without a null guard. Missing indices are simply undefined (falsy).
+    return _get('cr_cl') ?? {};
+  },
+
+  /* ── Clear all ──────────────────────────────────────────────────── */
+
+  clear() {
+    try {
+      localStorage.removeItem('cr_result');
+      localStorage.removeItem('cr_cl');
+      return true;
+    } catch (error) {
+      console.error('Storage.clear failed:', error);
+      return false;
+    }
+  },
+
+};
+
+
+/* ── Private helpers ──────────────────────────────────────────────────
+   Prefixed with _ to signal intent: do not call these from app.js.    */
+
+function _set(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch (error) {
+    // localStorage can throw when storage is full or blocked (e.g. private mode)
+    console.error(`Storage._set('${key}') failed:`, error);
+    return false;
+  }
+}
+
+function _get(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : null;
+  } catch (error) {
+    console.warn(`Storage._get('${key}') failed — data may be corrupted:`, error);
+    return null;
+  }
+}
+
+</script>
+<script>
+/* ═══════════════════════════════════════════════════════════════════════
+   CIVILIAN RESILIENCE  ·  Application Logic  ·  js/app.js
+   ═══════════════════════════════════════════════════════════════════════
+
+   Architecture principles
+   ───────────────────────
+   · IIFE wrapper     — zero global pollution; nothing leaks to window.
+   · Explicit DOM cache — every JS↔HTML contract is declared in one place.
+   · Single state object — all mutable values in one auditable location.
+   · Pure scoring functions — calcResults() and getTierInfo() have no
+     side-effects and are trivial to unit-test in isolation.
+   · Event delegation — one listener per dynamic list; no per-item
+     re-attachment on re-render, no memory leaks.
+   · Named constants — no magic numbers or duplicated strings.
+   · hidden attribute — JS-toggled visibility uses the standard HTML
+     `hidden` attribute, never inline style.display.
+
+   Companion files
+   ───────────────
+   data/questions.js  →  QUESTIONS[], DOMAINS[], CHECKLIST[]
+   data/articles.js   →  ARTICLES[], CHAPTERS[]
+   js/storage.js      →  Storage.{saveResult, loadResult,
+                                   saveChecklist, loadChecklist, clear}
+   ═══════════════════════════════════════════════════════════════════════ */
+
+(function () {
+  'use strict';
+
+
+  /* ── Constants ────────────────────────────────────────────────────────
+     Named constants replace every magic number and repeated string.
+     Change a value here and it propagates everywhere automatically.    */
+
+  const RING_RADIUS        = 80;
+  const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
+  const MAX_PROGRESS_DOTS  = 18;   // dots shown in the question progress strip
+  const SCORE_PER_QUESTION = 2;    // maximum score value per question
+
+  // Inlined once as a constant so the SVG string is never duplicated.
+  const ARROW_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+
+  // Tier thresholds — evaluated top-down; first match (pct >= min) wins.
+  // Adding or changing a tier means editing this array only, not scattered if-else.
+  const TIER_LEVELS = [
+    {
+      min:   80,
+      name:  'HIGHLY RESILIENT',
+      color: '#2A6B42',
+      desc:  'Exceptional preparedness. You have built real capability across multiple domains. Focus on community leadership and your remaining gaps.',
+    },
+    {
+      min:   60,
+      name:  'PREPARED',
+      color: '#8B6914',
+      desc:  'Solid foundation with identified gaps. Address your weak domains systematically to achieve high resilience within 90 days.',
+    },
+    {
+      min:   40,
+      name:  'DEVELOPING',
+      color: '#8B5E14',
+      desc:  'You understand preparedness but significant gaps remain. Prioritise the immediate actions in your weakest domains first.',
+    },
+    {
+      min:   0,
+      name:  'VULNERABLE',
+      color: '#B02A1A',
+      desc:  'Critical preparedness gaps identified. Start with water, food, and communication basics immediately — these cost little and save lives.',
+    },
+  ];
+
+
+  /* ── State ────────────────────────────────────────────────────────────
+     All mutable application state in a single object.
+     · Easy to find, audit, and reason about.
+     · Easy to migrate to a state manager (Redux, Zustand) when the app grows.
+     · Never mutated outside this file.                                  */
+
+  const state = {
+    userEmail:        '',
+    currentQuestion:  0,
+    answers:          [],     // parallel array to QUESTIONS; null = unanswered
+    activeFilter:     'all',
+    chaptersRendered: false,  // chapters are static — we only build them once
+  };
+
+
+  /* ── DOM Cache ────────────────────────────────────────────────────────
+     Every JS↔HTML contract declared in one place.
+     · If an id changes in index.html, there is exactly one line to fix.
+     · Eliminates repeated getElementById calls scattered across the file.
+     · Populated once during init(); treated as a constant thereafter.   */
+
+  let DOM;
+
+  function cacheDOM() {
+    DOM = {
+
+      // ─ Navigation ─────────────────────────────────────────────────
+      navLogo:     document.getElementById('nav-logo'),
+      navCta:      document.getElementById('btn-nav-cta'),
+      burger:      document.getElementById('btn-burger'),
+      mobileNav:   document.getElementById('mobileNav'),
+      siteNav:     document.getElementById('site-nav'),
+      navTabs:     document.querySelectorAll('.nav-tab, .nav-mobile-item'),
+      footerLinks: document.querySelectorAll('.f-link[data-page]'),
+
+      // ─ Home page ──────────────────────────────────────────────────
+      btnHeroAssessment: document.getElementById('btn-hero-assessment'),
+      btnHeroIntel:      document.getElementById('btn-hero-intel'),
+      btnTier1Start:     document.getElementById('btn-tier1-start'),
+      btnCtaAssessment:  document.getElementById('btn-cta-assessment'),
+
+      // ─ Calculator ─────────────────────────────────────────────────
+      btnStart:       document.getElementById('btn-start-assessment'),
+      btnBack:        document.getElementById('btnBack'),
+      btnNext:        document.getElementById('btnNext'),
+      btnRetake:      document.getElementById('btn-retake-r1'),
+      btnR1Intel:     document.getElementById('btn-r1-intel'),
+      btnViewCabinet: document.getElementById('btn-view-cabinet'),
+      emailInput:     document.getElementById('emailInput'),
+      calcHeader:     document.querySelector('.calc-header'),
+      progressFill:   document.getElementById('calcProgressFill'),
+      stepDots:       document.getElementById('stepDots'),
+      screens:        document.querySelectorAll('.screen'),
+      qCatBand:       document.getElementById('qCatBand'),
+      qNum:           document.getElementById('qNum'),
+      qTotal:         document.getElementById('qTotal'),
+      qText:          document.getElementById('qText'),
+      optsList:       document.getElementById('optsList'),
+
+      // ─ Results ────────────────────────────────────────────────────
+      ring1:    document.getElementById('ring1'),
+      sc1num:   document.getElementById('sc1num'),
+      sc1den:   document.getElementById('sc1den'),
+      sc1pct:   document.getElementById('sc1pct'),
+      st1name:  document.getElementById('st1name'),
+      st1desc:  document.getElementById('st1desc'),
+      dl1:      document.getElementById('dl1'),
+      refsWrap: document.getElementById('refsWrap'),
+      refsList: document.getElementById('refsList'),
+
+      // ─ Cabinet ────────────────────────────────────────────────────
+      btnCabRetake:     document.getElementById('btn-cab-retake'),
+      btnCabEmptyStart: document.getElementById('btn-cab-empty-start'),
+      btnClearData:     document.getElementById('btn-clear-data'),
+      btnConfirmClear:  document.getElementById('btn-confirm-clear'),
+      btnCancelClear:   document.getElementById('btn-cancel-clear'),
+      cabEmpty:         document.getElementById('cab-empty'),
+      cabDash:          document.getElementById('cab-dash'),
+      confirmClear:     document.getElementById('confirm-clear'),
+      dsScore:          document.getElementById('ds-score'),
+      dsPct:            document.getElementById('ds-pct'),
+      dsTier:           document.getElementById('ds-tier'),
+      dsDate:           document.getElementById('ds-date'),
+      cscDateStr:       document.getElementById('csc-date-str'),
+      cscBig:           document.getElementById('csc-big'),
+      cscDenom:         document.getElementById('csc-denom'),
+      cscTierH:         document.getElementById('csc-tier-h'),
+      cscTierP:         document.getElementById('csc-tier-p'),
+      cabDomains:       document.getElementById('cab-domains'),
+      checklistEl:      document.getElementById('checklistEl'),
+
+      // ─ Intel Hub ──────────────────────────────────────────────────
+      intelSearch:   document.getElementById('intelSearch'),
+      filterBtns:    document.querySelectorAll('.f-btn[data-filter]'),
+      featuredCards: document.querySelectorAll('[data-article-id]'),
+      articlesGrid:  document.getElementById('articlesGrid'),
+      chapterGrid:   document.getElementById('chapterGrid'),
+
+      // ─ Modal ──────────────────────────────────────────────────────
+      btnModalClose: document.getElementById('btn-modal-close'),
+      modalBg:       document.getElementById('modalBg'),
+      modalCat:      document.getElementById('modalCat'),
+      modalTitle:    document.getElementById('modalTitle'),
+      modalContent:  document.getElementById('modalContent'),
+
+      // ─ Newsletter ─────────────────────────────────────────────────
+      btnSubscribe: document.getElementById('btn-subscribe'),
+      nlEmail:      document.getElementById('nlEmail'),
+
+    };
+  }
+
+
+  /* ── Bootstrap ────────────────────────────────────────────────────────
+     Entry point. Kept intentionally minimal: cache DOM, then wire events. */
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  function init() {
+    cacheDOM();
+    bindEvents();
+  }
+
+  function bindEvents() {
+
+    // ─ Navigation ───────────────────────────────────────────────────
+    DOM.navLogo.addEventListener('click', () => showPage('home'));
+    DOM.navCta.addEventListener('click',  () => showPage('calc'));
+    DOM.burger.addEventListener('click',  toggleMobileNav);
+
+    // Close the mobile nav after navigating — one listener, both desktop tabs and mobile items
+    DOM.navTabs.forEach(tab => tab.addEventListener('click', () => {
+      showPage(tab.dataset.page);
+      closeMobileNav();
+    }));
+
+    DOM.footerLinks.forEach(link => link.addEventListener('click', () => showPage(link.dataset.page)));
+
+    window.addEventListener('scroll', () => {
+      DOM.siteNav.classList.toggle('shadowed', window.scrollY > 20);
+    });
+
+    // ─ Home page ────────────────────────────────────────────────────
+    DOM.btnHeroAssessment.addEventListener('click', () => showPage('calc'));
+    DOM.btnHeroIntel.addEventListener('click',      () => showPage('intel'));
+    DOM.btnTier1Start.addEventListener('click',     () => showPage('calc'));
+    DOM.btnCtaAssessment.addEventListener('click',  () => showPage('calc'));
+
+    // ─ Calculator ───────────────────────────────────────────────────
+    DOM.btnStart.addEventListener('click',       startAssessment);
+    DOM.btnBack.addEventListener('click',        goBack);
+    DOM.btnNext.addEventListener('click',        goNext);
+    DOM.btnRetake.addEventListener('click',      restartCalc);
+    DOM.btnR1Intel.addEventListener('click',     () => showPage('intel'));
+    DOM.btnViewCabinet.addEventListener('click', () => showPage('cabinet'));
+
+    // Event delegation — one listener handles all dynamically-rendered option rows.
+    // No need to re-attach listeners after each re-render.
+    DOM.optsList.addEventListener('click', (event) => {
+      const row = event.target.closest('.opt-row');
+      if (row) pickOption(Number(row.dataset.optionIndex));
+    });
+
+    // ─ Cabinet ──────────────────────────────────────────────────────
+    DOM.btnCabRetake.addEventListener('click',     () => showPage('calc'));
+    DOM.btnCabEmptyStart.addEventListener('click', () => showPage('calc'));
+    DOM.btnClearData.addEventListener('click',     showConfirmClear);
+    DOM.btnConfirmClear.addEventListener('click',  confirmClear);
+    DOM.btnCancelClear.addEventListener('click',   cancelClear);
+
+    // Event delegation — one listener handles all checklist items.
+    // toggleChecklistItem updates only the toggled element; no full re-render.
+    DOM.checklistEl.addEventListener('click', (event) => {
+      const item = event.target.closest('.cl-item');
+      if (item) toggleChecklistItem(Number(item.dataset.checklistIndex));
+    });
+
+    // ─ Intel Hub ────────────────────────────────────────────────────
+    DOM.intelSearch.addEventListener('input', renderArticles);
+
+    DOM.filterBtns.forEach(btn => btn.addEventListener('click', () => setFilter(btn.dataset.filter, btn)));
+
+    // Featured cards are static — direct listeners are fine here.
+    DOM.featuredCards.forEach(card => card.addEventListener('click', () => {
+      openArticle(Number(card.dataset.articleId));
+    }));
+
+    // Event delegation — one listener handles all dynamically-rendered article cards.
+    DOM.articlesGrid.addEventListener('click', (event) => {
+      const card = event.target.closest('[data-article-id]');
+      if (card) openArticle(Number(card.dataset.articleId));
+    });
+
+    // ─ Modal ────────────────────────────────────────────────────────
+    DOM.btnModalClose.addEventListener('click', closeModal);
+    DOM.modalBg.addEventListener('click', (event) => {
+      if (event.target === DOM.modalBg) closeModal();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeModal();
+    });
+
+    // ─ Newsletter ───────────────────────────────────────────────────
+    DOM.btnSubscribe.addEventListener('click', subscribeNewsletter);
+
+  }
+
+
+  /* ── Navigation ───────────────────────────────────────────────────── */
+
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+    document.getElementById('page-' + pageId).classList.add('active');
+
+    DOM.navTabs.forEach(tab => {
+      tab.classList.toggle('active', tab.dataset.page === pageId);
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (pageId === 'cabinet') loadCabinet();
+    if (pageId === 'intel')   renderIntelHub();
+  }
+
+  function toggleMobileNav() {
+    DOM.mobileNav.classList.toggle('open');
+  }
+
+  function closeMobileNav() {
+    DOM.mobileNav.classList.remove('open');
+  }
+
+
+  /* ── Calculator ───────────────────────────────────────────────────── */
+
+  function startAssessment() {
+    const email   = DOM.emailInput.value.trim();
+    const isValid = email.length > 0 && email.includes('@');
+
+    DOM.emailInput.classList.toggle('error', !isValid);
+    if (!isValid) { DOM.emailInput.focus(); return; }
+
+    state.userEmail = email;
+    state.answers   = new Array(QUESTIONS.length).fill(null);
+
+    buildProgressDots();
+    showQuestion(0);
+    showScreen('sc-q');
+  }
+
+  function showQuestion(index) {
+    state.currentQuestion = index;
+    const question = QUESTIONS[index];
+    const isLast   = index === QUESTIONS.length - 1;
+
+    // Update question content
+    DOM.qCatBand.textContent = DOMAINS[question.domain];
+    DOM.qNum.textContent     = index + 1;
+    DOM.qTotal.textContent   = QUESTIONS.length;
+    DOM.qText.textContent    = question.q;
+
+    // Render options — selection state baked into the markup via class
+    DOM.optsList.innerHTML = question.opts.map((opt, optIndex) => `
+      <div class="opt-row${state.answers[index] === optIndex ? ' sel' : ''}"
+           data-option-index="${optIndex}">
+        <div class="opt-key">${opt.k}</div>
+        <div class="opt-txt">${opt.l}</div>
+        <div class="opt-score">${opt.s === 2 ? '●●' : opt.s === 1 ? '●○' : '○○'}</div>
+      </div>`
+    ).join('');
+
+    // Navigation controls
+    DOM.btnNext.innerHTML          = (isLast ? 'See Results ' : 'Next ') + ARROW_SVG;
+    DOM.btnBack.style.visibility   = index === 0 ? 'hidden' : 'visible';
+    setNextEnabled(state.answers[index] !== null);
+
+    // Progress indicators
+    DOM.progressFill.style.width = `${(index / QUESTIONS.length) * 100}%`;
+    updateProgressDots(index);
+
+    // Re-trigger entry animation.
+    // `void el.offsetHeight` forces a synchronous layout (reflow), which flushes
+    // the style.animation = 'none' before we re-apply the animation class.
+    const screen = document.getElementById('sc-q');
+    screen.style.animation = 'none';
+    void screen.offsetHeight;
+    screen.style.animation = 'fadeUp 0.35s ease both';
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function pickOption(optionIndex) {
+    state.answers[state.currentQuestion] = optionIndex;
+
+    // Toggle selection classes in-place — no full list rebuild needed
+    DOM.optsList.querySelectorAll('.opt-row').forEach((row, i) => {
+      row.classList.toggle('sel', i === optionIndex);
+    });
+
+    setNextEnabled(true);
+  }
+
+  function goNext() {
+    if (state.answers[state.currentQuestion] === null) return;
+
+    if (state.currentQuestion < QUESTIONS.length - 1) {
+      showQuestion(state.currentQuestion + 1);
+    } else {
+      showResults();
+    }
+  }
+
+  function goBack() {
+    if (state.currentQuestion > 0) showQuestion(state.currentQuestion - 1);
+  }
+
+  function showScreen(screenId) {
+    DOM.screens.forEach(screen => screen.classList.remove('active'));
+    document.getElementById(screenId).classList.add('active');
+
+    // The progress header strip is only meaningful during the question flow
+    DOM.calcHeader.hidden = (screenId === 'sc-email' || screenId === 'sc-r1');
+  }
+
+  function setNextEnabled(isEnabled) {
+    DOM.btnNext.disabled      = !isEnabled;
+    DOM.btnNext.style.opacity = isEnabled ? '1' : '0.4';
+    DOM.btnNext.style.cursor  = isEnabled ? 'pointer' : 'not-allowed';
+  }
+
+  function buildProgressDots() {
+    const count = Math.min(QUESTIONS.length, MAX_PROGRESS_DOTS);
+    DOM.stepDots.innerHTML = Array.from(
+      { length: count },
+      (_, i) => `<div class="sdot" id="dot${i}"></div>`
+    ).join('');
+  }
+
+  function updateProgressDots(activeIndex) {
+    const count = Math.min(QUESTIONS.length, MAX_PROGRESS_DOTS);
+    for (let i = 0; i < count; i++) {
+      const dot = document.getElementById(`dot${i}`);
+      if (dot) dot.className = 'sdot' + (i < activeIndex ? ' done' : i === activeIndex ? ' cur' : '');
+    }
+  }
+
+  function restartCalc() {
+    state.answers         = [];
+    state.currentQuestion = 0;
+    DOM.emailInput.value         = '';
+    DOM.progressFill.style.width = '0%';
+    showScreen('sc-email');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+
+  /* ── Scoring — pure functions ─────────────────────────────────────────
+     These functions read from `state` and `QUESTIONS` but touch no DOM.
+     · Easy to unit-test in isolation.
+     · A single pass through QUESTIONS computes everything at once.       */
+
+  /**
+   * Computes all score data in a single pass over QUESTIONS.
+   * @returns {{ totalScore: number, maxScore: number, percentage: number, domainScores: Object }}
+   */
+  function calcResults() {
+    const maxScore     = QUESTIONS.length * SCORE_PER_QUESTION;
+    const domainScores = {};
+
+    const totalScore = QUESTIONS.reduce((sum, question, index) => {
+      const answer = state.answers[index];
+      const score  = answer !== null ? question.opts[answer].s : 0;
+
+      if (!domainScores[question.domain]) {
+        domainScores[question.domain] = { score: 0, maxScore: 0 };
+      }
+      domainScores[question.domain].score    += score;
+      domainScores[question.domain].maxScore += SCORE_PER_QUESTION;
+
+      return sum + score;
+    }, 0);
+
+    return {
+      totalScore,
+      maxScore,
+      percentage:   Math.round((totalScore / maxScore) * 100),
+      domainScores,
+    };
+  }
+
+  /**
+   * Returns tier metadata for a given percentage score.
+   * Data-driven: behaviour is defined by TIER_LEVELS, not by branching logic.
+   * @param   {number} percentage  0–100
+   * @returns {{ min: number, name: string, color: string, desc: string }}
+   */
+  function getTierInfo(percentage) {
+    return TIER_LEVELS.find(tier => percentage >= tier.min);
+  }
+
+  /**
+   * Animates an element's textContent counting up to a target number.
+   * @param {HTMLElement} element
+   * @param {number}      target
+   */
+  function animateCount(element, target) {
+    let current = 0;
+    const step  = Math.max(1, Math.round(target / 45));
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      element.textContent = current;
+      if (current >= target) clearInterval(timer);
+    }, 30);
+  }
+
+  /**
+   * Renders animated domain score bars into a container element.
+   * Shared between the results screen and the cabinet dashboard.
+   * Bars start at 0% width and animate to their value after a paint frame.
+   * @param {HTMLElement} container
+   * @param {Object}      domainScores  — { [domainIndex]: { score, maxScore } }
+   */
+  function renderDomainBars(container, domainScores) {
+    container.innerHTML = Object.entries(domainScores).map(([domainIndex, data]) => {
+      const pct      = Math.round((data.score / data.maxScore) * 100);
+      const barColor = pct >= 70 ? 'var(--success)' : pct >= 40 ? 'var(--accent)' : 'var(--danger)';
+      return `
+        <div class="domain-row">
+          <div class="dr-top">
+            <div class="dr-name">${DOMAINS[domainIndex]}</div>
+            <div class="dr-score" style="color:${barColor}">${data.score}/${data.maxScore} · ${pct}%</div>
+          </div>
+          <div class="dr-bar">
+            <div class="dr-fill" data-width="${pct}%" style="background:${barColor}"></div>
+          </div>
+        </div>`;
+    }).join('');
+
+    // Short delay gives the browser a frame to paint bars at 0 before animating to full width
+    setTimeout(() => {
+      container.querySelectorAll('.dr-fill').forEach(bar => { bar.style.width = bar.dataset.width; });
+    }, 200);
+  }
+
+
+  /* ── Results ──────────────────────────────────────────────────────── */
+
+  function showResults() {
+    showScreen('sc-r1');
+    DOM.progressFill.style.width = '100%';
+
+    const { totalScore, maxScore, percentage, domainScores } = calcResults();
+    const tierInfo = getTierInfo(percentage);
+
+    // Animate score ring and counters.
+    // Small delay allows the screen transition to fully paint before animation begins.
+    setTimeout(() => {
+      animateCount(DOM.sc1num, totalScore);
+      DOM.sc1den.textContent = `/ ${maxScore}`;
+      DOM.sc1pct.textContent = `${percentage}%`;
+
+      DOM.ring1.style.strokeDashoffset = RING_CIRCUMFERENCE - (RING_CIRCUMFERENCE * percentage / 100);
+      DOM.ring1.style.stroke           = tierInfo.color;
+      DOM.st1name.textContent          = tierInfo.name;
+      DOM.st1name.style.color          = tierInfo.color;
+      DOM.st1desc.textContent          = tierInfo.desc;
+    }, 100);
+
+    renderDomainBars(DOM.dl1, domainScores);
+    renderWeakAnswers();
+
+    Storage.saveResult({
+      date:    new Date().toISOString(),
+      score:   totalScore,
+      max:     maxScore,
+      pct:     percentage,
+      email:   state.userEmail,
+      domains: domainScores,
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function renderWeakAnswers() {
+    const weakAnswers = QUESTIONS.reduce((acc, question, index) => {
+      const answer = state.answers[index];
+      if (answer === null) return acc;
+
+      const opt = question.opts[answer];
+      if (opt.s < SCORE_PER_QUESTION) {
+        acc.push({ question: question.q, answer: opt.l, score: opt.s, ref: question.ref });
+      }
+      return acc;
+    }, []);
+
+    DOM.refsWrap.hidden = weakAnswers.length === 0;
+    DOM.refsList.innerHTML = weakAnswers.map(item => `
+      <div class="ref-item">
+        <div class="ref-q">${item.question}</div>
+        <div class="ref-ans">Your answer: "${item.answer}" — ${item.score === 1 ? 'Vulnerable' : 'Critical risk'}</div>
+        <div class="ref-ch">📖 ${item.ref}</div>
+      </div>`
+    ).join('');
+  }
+
+
+  /* ── Cabinet ──────────────────────────────────────────────────────── */
+
+  function loadCabinet() {
+    const saved = Storage.loadResult();
+
+    DOM.cabEmpty.hidden = !!saved;
+    DOM.cabDash.hidden  = !saved;
+    if (!saved) return;
+
+    const tierInfo = getTierInfo(saved.pct);
+    const date     = new Date(saved.date);
+
+    // Summary strip
+    DOM.dsScore.textContent = `${saved.score}/${saved.max}`;
+    DOM.dsPct.textContent   = `${saved.pct}%`;
+    DOM.dsTier.textContent  = tierInfo.name.split(' ')[0];
+    DOM.dsDate.textContent  = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+
+    // Score card
+    DOM.cscDateStr.textContent = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    DOM.cscBig.textContent     = saved.score;
+    DOM.cscBig.style.color     = tierInfo.color;
+    DOM.cscDenom.textContent   = `/ ${saved.max} pts`;
+    DOM.cscTierH.textContent   = tierInfo.name;
+    DOM.cscTierH.style.color   = tierInfo.color;
+    DOM.cscTierP.textContent   = tierInfo.desc;
+
+    // Domain bars — use real per-domain scores if present.
+    // Fallback handles legacy data saved before the domains field was added.
+    if (saved.domains) {
+      renderDomainBars(DOM.cabDomains, saved.domains);
+    } else {
+      const color = saved.pct >= 70 ? 'var(--success)' : saved.pct >= 40 ? 'var(--accent)' : 'var(--danger)';
+      DOM.cabDomains.innerHTML = `
+        <div class="cab-domain-row">
+          <div class="cdn-name">Overall Readiness</div>
+          <div class="cdn-rail">
+            <div class="cdn-fill" data-width="${saved.pct}%" style="background:${color}"></div>
+          </div>
+          <div class="cdn-pct" style="color:${color}">${saved.pct}%</div>
+        </div>`;
+      setTimeout(() => {
+        DOM.cabDomains.querySelectorAll('.cdn-fill').forEach(bar => { bar.style.width = bar.dataset.width; });
+      }, 200);
+    }
+
+    renderChecklist();
+  }
+
+  function renderChecklist() {
+    const savedState = Storage.loadChecklist();
+    DOM.checklistEl.innerHTML = CHECKLIST.map((item, index) => `
+      <div class="cl-item${savedState[index] ? ' checked' : ''}" data-checklist-index="${index}">
+        <div class="cl-box">${savedState[index] ? '✓' : ''}</div>
+        <div>
+          <div class="cl-text">${item.t}</div>
+          <div class="cl-ch">${item.ch}</div>
+        </div>
+      </div>`
+    ).join('');
+    // Clicks are handled by event delegation on DOM.checklistEl (see bindEvents)
+  }
+
+  function toggleChecklistItem(index) {
+    const savedState  = Storage.loadChecklist();
+    savedState[index] = !savedState[index];
+    Storage.saveChecklist(savedState);
+
+    // Surgical DOM update — no full list re-render needed
+    const item = DOM.checklistEl.querySelector(`[data-checklist-index="${index}"]`);
+    if (!item) return;
+    item.classList.toggle('checked', savedState[index]);
+    item.querySelector('.cl-box').textContent = savedState[index] ? '✓' : '';
+  }
+
+  function showConfirmClear() { DOM.confirmClear.hidden = false; }
+  function cancelClear()      { DOM.confirmClear.hidden = true;  }
+
+  function confirmClear() {
+    Storage.clear();
+    DOM.confirmClear.hidden = true;
+    loadCabinet();
+  }
+
+
+  /* ── Intel Hub ────────────────────────────────────────────────────── */
+
+  function renderIntelHub() {
+    renderArticles();
+    // Chapters are static content — build the DOM exactly once
+    if (!state.chaptersRendered) {
+      renderChapters();
+      state.chaptersRendered = true;
+    }
+  }
+
+  function setFilter(filter, button) {
+    state.activeFilter = filter;
+    // Toggle active class relative to the clicked button — no querySelectorAll loop needed
+    DOM.filterBtns.forEach(btn => btn.classList.toggle('active', btn === button));
+    renderArticles();
+  }
+
+  function renderArticles() {
+    const query = DOM.intelSearch.value.toLowerCase().trim();
+
+    DOM.articlesGrid.innerHTML = ARTICLES.map(article => {
+      const matchesFilter = state.activeFilter === 'all' || article.cat === state.activeFilter;
+      const matchesSearch = !query
+        || article.title.toLowerCase().includes(query)
+        || article.expt.toLowerCase().includes(query);
+
+      return `
+        <div class="art-card${matchesFilter && matchesSearch ? '' : ' hidden'}"
+             data-article-id="${article.id}">
+          <div class="art-cat">${article.catL}</div>
+          <div class="art-title">${article.title}</div>
+          <div class="art-expt">${article.expt}</div>
+          <div class="art-foot">
+            <span class="art-ch">${article.ch}</span>
+            <span class="art-time">${article.time}</span>
+          </div>
+        </div>`;
+    }).join('');
+    // Clicks handled by delegation listener on DOM.articlesGrid (see bindEvents)
+  }
+
+  function renderChapters() {
+    DOM.chapterGrid.innerHTML = CHAPTERS.map(chapter => `
+      <div class="chap-card">
+        <div class="chap-num">${chapter.n}</div>
+        <div class="chap-title">${chapter.t}</div>
+        <div class="chap-sub">${chapter.s}</div>
+        <div class="chap-arr">→</div>
+      </div>`
+    ).join('');
+  }
+
+
+  /* ── Modal ────────────────────────────────────────────────────────── */
+
+  function openArticle(articleId) {
+    const article = ARTICLES.find(item => item.id === articleId);
+    if (!article) return;
+
+    DOM.modalCat.textContent   = `${article.catL} · ${article.ch}`;
+    DOM.modalTitle.textContent = article.title;
+    DOM.modalContent.innerHTML = article.content;
+    DOM.modalBg.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    DOM.modalBg.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+
+  /* ── Newsletter ───────────────────────────────────────────────────── */
+
+  function subscribeNewsletter() {
+    const email   = DOM.nlEmail.value.trim();
+    const isValid = email.length > 0 && email.includes('@');
+
+    if (!isValid) {
+      DOM.nlEmail.style.borderColor = 'rgba(176,42,26,0.7)';
+      DOM.nlEmail.focus();
+      return;
+    }
+
+    // TODO: replace with a real API call when the backend is ready
+    // await fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) });
+
+    DOM.nlEmail.value             = '';
+    DOM.nlEmail.placeholder       = '✓ Subscribed!';
+    DOM.nlEmail.style.borderColor = 'rgba(90,175,133,0.7)';
+
+    setTimeout(() => {
+      DOM.nlEmail.placeholder       = 'your@email.com';
+      DOM.nlEmail.style.borderColor = '';
+    }, 4000);
+  }
+
+})();
+
+</script>
+
 </body>
 </html>
