@@ -65,8 +65,8 @@
    Refresh tokens never expire unless manually revoked, so users
    stay logged in across browser restarts indefinitely.             */
 
-const SUPABASE_URL      = 'https://YOUR_PROJECT_ID.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR_ANON_PUBLIC_KEY';
+const SUPABASE_URL      = 'https://dkzzjccnxszlalopoazu.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRrenpqY2NueHN6bGFsb3BvYXp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0NjY3MTksImV4cCI6MjA4OTA0MjcxOX0.LHHL7J1cbIxQqaELuaWLR19L6KFhK0vwsZuagoY1qBk';
 
 
 /* ── Client ───────────────────────────────────────────────────────────
