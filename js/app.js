@@ -407,7 +407,7 @@
       setTimeout(() => openArticle(Number(articleMatch[1])), 200);
       return;
     }
-    const validPages = ['home', 'calc', 'cabinet', 'intel', 'library'];
+    const validPages = ['home', 'calc', 'cabinet', 'intel', 'library', 'privacy'];
     if (validPages.includes(hash)) showPage(hash, false);
   }
 
