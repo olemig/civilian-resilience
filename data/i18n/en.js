@@ -219,7 +219,8 @@ LANGS.en = {
 
   // ── Footer ────────────────────────────────────────────────────────
   footer: {
-    legal: '© 2025 When Systems Fail',
+    legal:       '© 2025 When Systems Fail',
+    privacyLink: 'Privacy Policy',
   },
 
   // ── Domains ───────────────────────────────────────────────────────
